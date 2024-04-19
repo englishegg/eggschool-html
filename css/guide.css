@@ -1,0 +1,247 @@
+.main_content.guide {
+    padding-top: 7em;
+}
+
+.guide.kinder {
+    --font-point: var(--red-600);
+    --bg-point: var(--red-500);
+    --bg-number: #1662b6;
+    --bg-border-title: #fde0e1;
+}
+
+.guide.element {
+    --font-point: var(--green-650);
+    --bg-point: var(--green-400);
+    --bg-number: #00b4ca;
+}
+
+.guide.library {
+    --font-point: #6b38c8;
+    --bg-point: #754ac5;
+    --bg-number: #d42828;
+}
+
+.guide_wrapper {
+    max-width: 750px;
+    margin-inline: auto;
+    margin-top: 5em;
+}
+
+.cover_block { margin-bottom: 5em; }
+
+.cover_block .inner {
+    max-width: 670px;
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 3em;
+}
+
+.cover_block .greeting {
+    font-family: var(--font-family-myriad);
+    font-size: 2.5rem;
+    color: #949598;
+    font-weight: 700;
+    line-height: 1.03;
+    margin-bottom: 1em;
+}
+
+.cover_block .greeting .font_point {
+    display: block;
+    font-size: 1.32em;
+}
+
+.cover_block .title {
+    font-size: 3.8rem;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+    margin-bottom: 0.6em;
+}
+
+.cover_block .sub_title {
+    font-size: 0.6em;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+
+.cover_block .img_cover {
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+.step_block { margin-bottom: 7em; }
+
+.step_block .title_block { text-align: center; }
+
+.step_block .title_block .title {
+    display: inline-block;
+    background-color: var(--bg-point);
+    font-size: 2.3rem;
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 3rem;
+    padding: 0.2em 1.3em;
+    margin-inline: auto;
+    margin-bottom: 1em;
+}
+
+.step_block .sub_title {
+    font-size: 2.7rem;
+    font-weight: bold;
+    line-height: 1.22;
+    margin-bottom: 1em;
+}
+
+.step_block .sub_title .border {
+    position: relative;
+    z-index: 2;
+}
+
+.step_block .sub_title .border::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    height: 80%;
+    background-color: var(--bg-border-title);
+    z-index: -1;
+}
+
+.step_block .sub_title .border.active::after {
+    animation: expandWidth 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0; /* 시작 너비 */
+    }
+    to {
+        width: 100%; /* 최종 너비 */
+    }
+}
+
+.step_box {
+    position: relative;
+    display: flex;
+    gap: 1em;
+    margin-block: 1em 4em;
+}
+
+.step_box .thumb_block { width: 45%; }
+
+.step_box .info_block { width: 55%; padding-top: 1em; }
+
+.step_box .title {
+    font-size: 1.5rem;
+    color: var(--font-point);
+    font-weight: bold;
+    line-height: 1.33;
+    margin-bottom: 0.2em;
+}
+
+.step_box .num {
+    position: absolute;
+    top: -0.7em;
+    left: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: var(--bg-number);
+    font-family: var(--font-family-myriad-black);
+    font-size: 1.5rem;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: -0.02em;
+    border-radius: 50% 50% 0 50%;
+}
+
+.step_block .desc,
+.step_box .desc {
+    font-size: 1.5rem;
+    color: var(--black-500);
+    font-weight: normal;
+    line-height: 1.33;
+}
+
+.step_block .desc.md {
+    font-size: 1.7rem;
+}
+
+.step_block .font_point { font-weight: bold; }
+
+.step_block .img_package {
+    max-width: 80%;
+    margin: 2.5em auto 2em;
+}
+
+.step_block .img_package.w_100 { max-width: 100%; }
+
+.step_box .subscript {
+    display: block;
+    font-size: 0.73em;
+    color: #7e7e7e;
+    margin-top: 0.3em;
+}
+
+.step_box .subscript.star {
+    position: relative;
+    padding-left: 0.7em;
+}
+
+.step_box .subscript.star::before {
+    content: '*';
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+}
+
+.app_link_block {
+    width: 100%;
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.app_link_block li {
+    max-width: 45%;
+}
+
+.app_link_block img {
+    max-width: 100%;
+}
+
+/* mobile(sm)  */
+@media screen and (max-width: 768px) {
+    .main_content.guide { padding-top: 4em; }
+
+    .cover_block .greeting { font-size: 2rem; }
+
+    .cover_block .title { font-size: 2.5rem }
+
+    .step_block {
+        padding-inline: 1em;
+    }
+
+    .step_block .title_block .title { font-size: 1.5rem; }
+
+    .step_block .sub_title { font-size: 1.6875rem; }
+
+    .step_box { gap: 0.5em; margin-bottom: 3em }
+    .step_box .info_block { padding-top: 0.3em; }
+
+    .step_box .num,
+    .step_box .title,
+    .step_block .desc {
+        font-size: 1rem;
+    }
+
+    .step_block .desc.md { font-size: 1.2rem; }
+
+    .app_link_block { margin-top: 0.7em; }
+}

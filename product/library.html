@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>도서관</title>
+    <!--S:fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <!--S: Swiper CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--S: gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <!--E:fonts-->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <script src="/js/modal.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--S:header-->
+    <header class="header">
+        <a href="/"><img src="/images/logo.png" alt="Egg School"></a>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="d_flex utill_menu_block">
+            <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            <button type="button" class="utill_menu" onclick="toggleMySchool()">My School
+                <ul class="mypage_link_block">
+                    <li class="mypage_link logout">로그아웃</li>
+                    <li class="mypage_link"><a href="/myschool/userinfo">회원정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                    <li class="mypage_link"><a href="/myschool/paylist">결제내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/delivery">배송내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/dataroom">자료실</a></li>
+                    <li class="mypage_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <!--S:mobile-->
+    <header class="m_header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" alt="Egg School"></a></div>
+        <div class="m_menu_block">
+            <div class="utill_menu_block">
+                <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            </div>
+            <button class="btn_nav" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="m_nav_wrapper">
+        <div class="nav_top d_flex align_center">
+            <div class="login_block">
+                <img class="logo" src="/images/logo.png" alt="Egg School">
+                <p class="login_txt"><a href="/login" class="font_600">로그인</a>해주세요</p>
+            </div>
+            <button class="btn_nav open" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">My School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/myschool/userinfo">회원정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                        <li class="lnb_link"><a href="/myschool/paylist">결제내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/delivery">배송내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/dataroom">자료실</a></li>
+                        <li class="lnb_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dimmed"></div>
+    <!--E:header-->
+    <main class="main_content library product">
+        <section class="sub_visual_wrapper">
+            <div class="sub_title_block">
+                <div class="inner">
+                    <h2 class="title">도서관</h2>
+                    <p class="desc">
+                        영미권에서 널리 읽히는 명작동화, 위인전집,<br />
+                        뮤지컬을 즐기다 보면, 배경 지식이 쌓이고 익숙해져요.<br />
+                        <strong class="font_blod">에그스쿨 도서관에서 영미권 문화에 대한<br class="m_br" /> 교양을 쌓아보세요.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="product_link_wrapper">
+            <ul class="product_link_block">
+                <li class="product_link kinder"><a href="/product/kinder">유치원</a></li>
+                <li class="product_link element"><a href="/product/element">초등</a></li>
+                <li class="product_link library active"><a href="/product/library">도서관</a></li>
+            </ul>
+        </section>
+        <section class="product_detail_wrapper spacing_product">
+            <div class="container">
+                <h3 class="product_title" data-aos="fade-up">
+                    <span class="d_none_sm">세상을 살아가는 데 꼭 필요한 <strong class="font_point">소양과 덕목,<br />
+                        삶의 지혜</strong>가 담긴 </span><strong class="font_point">세계명작동화</strong>를<br class="pc_br" />
+                    <strong class="font_point">살아있는<br class="m_br" /> 이야기와 노래</strong>로 즐겨보세요!
+                </h3>
+                <div class="product_thumb_box" data-aos="fade-up">
+                    <img src="/images/product/img_product_library.png" alt="">
+                    <div class="font_right">
+                        <button class="btn_detail" onclick="showModal('#productDetailModal')"><i class="ico_search"></i> 제품 구성 상세 안내</button>
+                    </div>
+                </div>
+            </div>
+            <aside class="modal header_gray" id="productDetailModal">
+                <div class="modal_content">
+                    <div class="modal_body">
+                        <div class="title_block">
+                            <div class="font_right">
+                                <button class="btn_close" onclick="closeModal('#productDetailModal')"><i class="ico_close"></i></button>
+                            </div>
+                            <p class="title">제품 상세 안내</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="detail_list_wrapper">
+                                <dl class="detail_box">
+                                    <dt class="title">패키지 구성품</dt>
+                                    <dd class="desc">
+                                        스토리북 30권, 콘텐츠가이드 1권,<br class="m_br" />  Plus 스토리북 1권,<br class="pc_br" />
+                                        Plus 스토리북 해석본,<br class="m_br" /> 애니메이션 영상 30편,<br class="pc_br" />
+                                        음원 108편,<br class="m_br" /> 스토리북 디지털 E-Book 30편,<br />
+                                        Plus 스토리북 디지털 E-Book 20편
+                                    </dd>
+                                </dl>
+                                <dl class="detail_box">
+                                    <dt class="title">영상 서비스 이용 기간</dt>
+                                    <dd class="desc">
+                                        구매일로부터 2년
+                                        <p class="font_600">* 에그스쿨 펜 구매는 선택 사항입니다. </p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <section class="product_feature_wrapper spacing_product">
+            <div class="container">
+                <ul class="feature_box_block" data-aos="fade-up">
+                    <li class="title">
+                        <picture>
+                            <source srcset="/images/product/library/m_img_ftts_logo.png" media="(max-width: 768px)" />
+                            <img src="/images/product/library/img_ftts_logo.png" alt="Fairy Tales That Sing" />
+                        </picture>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_planner.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">브로드웨이 원어민<br />
+                            작곡가</span>가 만든 노래
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_music.png" alt="">
+                        <p class="desc">
+                            영어 특징을<br />
+                            완벽하게 살린 <span class="font_point">라임</span>
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_book.png" alt="">
+                        <p class="desc">
+                            대화만으로 <span class="font_point">완성도<br />
+                            높은 이야기</span> 구현
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="spacing_product">
+            <!--S:1번-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">1</h3>
+                        <h3 class="title">
+                            영미권에서 널리 읽히는<br class="m_br" /> 명작 동화
+                        </h3>
+                        <p class="desc">
+                            명작 동화를 읽고 즐기다 보면, 영미권 문화에 대한<br class="m_br" /> 배경 지식이 쌓이고<br class="pc_br" />
+                            우리 아이의 인성, 지혜,<br class="m_br" /> 상상력이 함께 자라납니다.
+                        </p>
+                    </div>
+                    <div class="thumb_block" data-aos="fade-up">
+                        <img src="/images/product/library/img_step01.png" alt="">
+                    </div>
+                </div>
+            </article>
+            <!--E:1번.-->
+            <!--S:2번.-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">2</h3>
+                        <h3 class="title">
+                            영상과 음원으로 만나는 동화
+                        </h3>
+                        <p class="desc">
+                            애니메이션으로 구성되어 있어 아이들이 더 좋아해요.<br />
+                            중독성 강한 노래를 삽입하여 보고 있기만 해도<br />
+                            영미권 문화에 한발짝 더 가까워집니다.
+                        </p>
+                    </div>
+                    <div class="song_wrapper">
+                        <h5 class="title_round">음원 구성</h5>
+                        <div class="song_block" data-aos="fade-up">
+                            <div class="img_thumb_box">
+                                <img src="/images/product/library/ft_detail_04_01.png" alt="">
+                            </div>
+                            <div class="song_desc">
+                                <h6 class="title">Drama</h6>
+                                <p class="desc">
+                                    동화의 전체 이야기를<br />
+                                    연기와 노래로 실감나게<br class="m_br" /> 구현했어요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="song_block" data-aos="fade-up">
+                            <div class="song_desc">
+                                <h6 class="title">Song</h6>
+                                <p class="desc">
+                                    드라마 중에서 아이들이 <br />
+                                    따라부르기 좋게<br class="m_br" /> 노래만 발췌했어요.
+                                </p>
+                            </div>
+                            <div class="img_thumb_box">
+                                <img src="/images/product/library/ft_detail_04_02.png" alt="">
+                            </div>
+                        </div>
+                        <div class="song_block" data-aos="fade-up">
+                            <div class="img_thumb_box">
+                                <img src="/images/product/library/ft_detail_04_03.png" alt="">
+                            </div>
+                            <div class="song_desc">
+                                <h6 class="title">Sing Along</h6>
+                                <p class="desc">
+                                    아이들 목소리로 신나게<br class="m_br" /> 노래를 <br class="pc_br" />
+                                    따라불러요.<br class="m_br" /> 듣다보면 우리 아이도 <br />
+                                    함께 신나서 부를거에요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--E:2번.-->
+            <!--S:3번.-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">3</h3>
+                        <h3 class="title">
+                            움직이는 E-BOOK
+                        </h3>
+                        <p class="desc">
+                            모바일과 태블릿을 통해 언제 어디서나<br class="m_br" /> 책과 함께 할 수 있도록 <br class="pc_br" />
+                            ‘움직이는 E-BOOK’ <br class="m_br" />서비스를 제공합니다.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up">
+                        <div class="video_player">
+                            <img src="/images/product/library/img_step03.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--E:3번.-->
+        </section>
+        <!--S:미리보기-->
+        <section class="spacing_product bg_secondary">
+            <div class="container">
+                <div class="num_title_block" data-aos="fade-up">
+                    <h3 class="title">
+                        영미권에서 사랑받는<br />
+                        <strong class="font_point">세계명작동화 미리보기</strong>
+                    </h3>
+                </div>
+                <div data-aos="fade-up">
+                    <div class="swiper preview_list_wrapper" id="previewSwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide preview_box">
+                                <div class="thumb_block">
+                                    <img src="/images/product/library/img_preview_01.png" alt="">
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Stone Soup</p>
+                                    <p class="desc">
+                                        배가 고픈 나그네들은 마을 사람들에게<br class="m_br" /> 먹을 것 좀 나누어 달라고 합니다. <br />
+                                        하지만 아무도 먹을 것을 주지 않자,<br class="m_br" /> 돌멩이 스프를 끓이기로 해요!
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide preview_box">
+                                <div class="thumb_block">
+                                    <img src="/images/product/library/img_preview_02.png" alt="">
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">The Bear and the Two Travelers</p>
+                                    <p class="desc">
+                                        존은 곰이 나타나자 자신을 그냥 두고<br class="m_br" /> 가버린 친구에게 실망합니다.<br />
+                                        하지만 친구가 잘못을 진심으로 뉘우치자<br class="m_br" /> 용서해주고,<br class="pc_br" />
+                                        다시 좋은 친구가 되었어요!
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide preview_box">
+                                <div class="thumb_block">
+                                    <img src="/images/product/library/img_preview_03.png" alt="">
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">The Three Little Pigs</p>
+                                    <p class="desc">
+                                        아기돼지 삼형제가 각자 집을 지었어요.<br />
+                                        그런데, 늑대가 나타나서<br class="m_br" /> 문을 열어 달라고 해요.<br />
+                                        “아니, 도대체 무슨 소리야? 어림없어!”
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_circle_prev swiper-button-prev"></div>
+                        <div class="btn_circle_next swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--E:미리보기-->
+        <!--S:에그스쿨펜-->
+        <section class="pen_banner_wrapper">
+            <div class="inner_block">
+                <div class="info_block" data-aos="fade-right">
+                    <span class="tag">선택 상품</span>
+                    <p class="sub_title">내 손안의 영어 친구</p>
+                    <h3 class="title">에그스쿨 펜</h3>
+                    <p class="desc">
+                        스토리북 속 영어 문장과 아이콘을 찍어<br />
+                        원하는동화의 음원을 편하게 들을 수 있어요.
+                    </p>
+                    <p class="subscript">* 에그스쿨 펜 구매는 선택 사항입니다.</p>
+                </div>
+                <div class="thumb_block" data-aos="fade-left">
+                    <picture>
+                        <source srcset="/images/product/m_img_pen_person.png" media="(max-width: 768px)">
+                        <img src="/images/product/img_pen_person.png"  loading="lazy" alt="" >
+                    </picture>
+                </div>
+            </div>
+            <div class="bg_pen_01"><img src="/images/product/bg_pen_01.png" alt="" loading="lazy"></div>
+            <div class="bg_pen_02"><img src="/images/product/bg_pen_02.png" alt="" loading="lazy"></div>
+        </section>
+        <!--E:에그스쿨펜-->
+    </main>
+    <!--S:footer-->
+    <footer class="footer">
+        <div class="fnb_top_block border_btm">
+            <div class="container d_flex">
+                <ul>
+                    <li class="terms_link"><a href="https://docs.google.com/document/d/e/2PACX-1vR0-fRTqpnP3VTZkx_SjRdQ8jxmDFuOm8ydXe4GmCLsrsbKGxG9DJOGGYKMhPmLsCapIa0Bo5EYRhDe/pub" target="_blank">이용약관</a></li>
+                    <li class="terms_link"><a href="https://docs.google.com/document/u/2/d/e/2PACX-1vR5WssFOjfXb5slk5eRm9aB1Cxumk2hHMwGUvSjpG3lSAhPWXscJyLaNHECx26a0k-oK6pCKVzvKczy/pub" target="_blank">개인정보 취급방침</a></li>
+                </ul>
+                <div class="fms_wrapper">
+                    <button type="button" onclick="toggleFamilySite()" class="btn_fms">Family Site &nbsp;&nbsp; +</button>
+                    <ul class="fms_link_block">
+                        <li class="fms_link"><a href="https://www.englishegg.com/" target="_blank">잉글리시에그</a></li>
+                        <li class="fms_link"><a href="https://www.englishegg.com/eggproduct/expression_line/story.php" target="_blank">영어놀이 센터</a></li>
+                        <li class="fms_link"><a href="https://eggschool.net/" target="_blank">에그스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fnb_btm_block">
+            <div class="container d_flex m_column_reverse">
+                <div>
+                    <h2 class="f_logo m_d_none"><img src="/images/f_logo.png" alt="Egg School"></h2>
+                    <!--pc-->
+                    <ul class="fnb_info_block m_d_none d_block">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <span class="division">대표자  송진우</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                    <!-- mo -->
+                    <ul class="fnb_info_block m_d_block d_none">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표자  송진우</span>
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                </div>
+                <div class="d_flex">
+                    <div class="cs_block">
+                        <dl class="fnb_number">
+                            <dt class="title">고객센터</dt>
+                            <dd class="number">1566-4957</dd>
+                        </dl>
+                        <ul class="fnb_info_block">
+                            <li class="fnb_info">평일   10:00 ~ 17:00  (주말 / 공휴일 휴무)</li>
+                            <li class="fnb_info">점심   12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <ul class="sns_link_block">
+                        <li class="sns_link"><a href="https://cafe.naver.com/eggschoolk" target="_blank"><img src="/images/icon/ico_sns_cafe.png" alt="네이버 카페"></a></li>
+                        <li class="sns_link"><a href="https://www.instagram.com/eggschool_k/" target="_blank"><img src="/images/icon/ico_sns_instar.png" alt="인스타그램"></a></li>
+                        <li class="sns_link"><a href="https://www.youtube.com/channel/UC6te0BNTwvi8DDXeROUlSIg" target="_blank"><img src="/images/icon/ico_sns_youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--E:footer-->
+</div>
+<script>
+    AOS.init({
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        offset: 100, // offset (in px) from the original trigger point
+        delay: 5, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+    });
+</script>
+</body>
+</html>

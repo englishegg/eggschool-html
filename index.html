@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>에그스쿨</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes,viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="robots" content="index,follow" />
+    <meta name="subject" content="English EGG School" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="author" content="English EGG School" />
+    <meta name="copyright" content="English EGG School" />
+    <meta name="writer" content="English EGG School" />
+    <meta name="language" content="ko" />
+    <meta name="title" content="에그스쿨 유치원, 집에서 다니는 미국유치원" />
+    <meta name="author" content="https://k.eggschool.net" />
+    <meta
+            name="keywords"
+            content="에그스쿨,에그스쿨 유치원,에그스쿨킨더,에그스쿨 Kinder, EGGSCHOOL KINDER, eggschool kinder, 유아영어,영어유치원,엄마표영어,유아영어교육,유치원영어,유아홈스쿨링,영어동화책,영어동화,놀이학교,영어알파벳쓰기,유아학습지,영어동요,유아파닉스"
+    />
+    <meta
+            name="description"
+            content="에그스쿨 유치원, 우리 아이 첫 영어 어떻게 시작할까요?"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="에그스쿨 유치원 공식 홈페이지" />
+    <meta property="og:url" content="https://eggschool.net" />
+    <meta property="og:title" content="에그스쿨 유치원 공식 홈페이지" />
+    <meta
+            property="og:description"
+            content="에그스쿨 유치원, 우리 아이 첫 영어 어떻게 시작할까요?"
+    />
+    <meta property="og:image" content="/images/home/favicon.ico" />
+    <meta name="twitter:og:image" content="/images/home/favicon.ico" />
+    <!--S:fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <!--S: Swiper CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!--S: gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--E:fonts-->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <script src="/js/common.js"></script>
+    <script src="/js/modal.js"></script>
+    <!--S: index 페이지 js-->
+    <script defer src="/js/main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--S:header-->
+    <header class="header">
+        <a href="/"><img src="/images/logo.png" alt="Egg School"></a>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="d_flex utill_menu_block">
+            <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            <button type="button" class="utill_menu" onclick="toggleMySchool()">My School
+                <ul class="mypage_link_block">
+                    <li class="mypage_link logout">로그아웃</li>
+                    <li class="mypage_link"><a href="/myschool/userinfo">회원정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                    <li class="mypage_link"><a href="/myschool/paylist">결제내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/delivery">배송내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/dataroom">자료실</a></li>
+                    <li class="mypage_link"><a href="/myschool/qna">1 : 1 문의내역</a></li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <!--S:mobile-->
+    <header class="m_header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" alt="Egg School"></a></div>
+        <div class="m_menu_block">
+            <div class="utill_menu_block">
+                <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            </div>
+            <button class="btn_nav" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="m_nav_wrapper">
+        <div class="nav_top d_flex align_center">
+            <div class="login_block">
+                <img class="logo" src="/images/logo.png" alt="Egg School">
+                <p class="login_txt"><a href="/login" class="font_600">로그인</a>해주세요</p>
+            </div>
+            <button class="btn_nav open" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">My School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/myschool/userinfo">회원정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                        <li class="lnb_link"><a href="/myschool/paylist">결제내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/delivery">배송내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/dataroom">자료실</a></li>
+                        <li class="lnb_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dimmed" onclick="handleMobileNav(this)"></div>
+    <!--E:header-->
+    <main class="main_content main">
+        <div class="main_head">
+            <!--S:영상-->
+            <section class="spacing_main hero_section">
+                <div class="content_wrapper">
+                    <div class="container">
+                        <h2 class="title">
+                            집에서 다니는 <br />
+                            미국 학교 <br />
+                            <img class="hero_logo" src="/images/logo_text.png" alt="Egg School">
+                        </h2>
+                    </div>
+                </div>
+                <div class="video_wrapper">
+                    <video class="video_visual"
+                           autoplay="" loop="" muted="" playsinline="" class="playing kinder-play"
+                           src="https://player.vimeo.com/progressive_redirect/playback/733486471/rendition/720p/file.mp4?loc=external&signature=c13084813717d80ef0425b06bb43b7798607e5e38e968a0775bcbcc1a00fc250"></video>
+                    <div class="dimmed"></div>
+                </div>
+                <i class="ico_arrow"><img src="/images/icon/ico_hero_arrow.png" alt="scroll"><em class="blind">Scroll</em></i>
+            </section>
+
+        </div>
+        <div class="main_body">
+            <!--S:미국 어린이의 알성울 그대로 담은 콘텐츠-->
+            <section class="spacing_main">
+                <div class="main_title_block font_center" data-aos="fade-up">
+                    <h3 class="title">
+                        미국 어린이의 <br class="m_br" /><span class="font_yellow">일상을<br class="pc_br" />
+                    그대로</span> 담은 콘텐츠
+                    </h3>
+                    <p class="desc">
+                        단순히 단어와 문장을 익히는 것이 아닌<br class="m_br" /> 현지 문화와 언어를 함께 접할 수 있는 콘텐츠로<br />
+                        아이가 영어를 모국어처럼 말할 수 있어요.
+                    </p>
+                </div>
+                <div data-aos="fade-up">
+                    <ul class="content_wrapper">
+                        <!--S:유치원-->
+                        <li class="content_list kinder">
+                            <div class="auto_slide d_flex">
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/kinder"><em class="title">미국<br /> 유치원</em><img src="/images/main/book/k/bg_content_title.png" alt="미국 유치원 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_15.png" alt=""></span>
+                                </div>
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/kinder"><em class="title">미국<br /> 유치원</em><img src="/images/main/book/k/bg_content_title.png" alt="미국 유치원 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/k/content_15.png" alt=""></span>
+                                </div>
+                            </div>
+                        </li>
+                        <!--S:초등-->
+                        <li class="content_list element">
+                            <div class="auto_slide d_flex">
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/element"><em class="title">미국<br /> 초등학교</em><img src="/images/main/book/e/bg_content_title.png" alt="미국 초등 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_15.png" alt=""></span>
+                                </div>
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/element"><em class="title">미국<br /> 초등학교</em><img src="/images/main/book/e/bg_content_title.png" alt="미국 초등 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/e/content_15.png" alt=""></span>
+                                </div>
+                            </div>
+                        </li>
+                        <!--S:도서관-->
+                        <li class="content_list library">
+                            <div class="auto_slide d_flex">
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/library"><em class="title">미국<br /> 도서관</em><img src="/images/main/book/l/bg_content_title.png" alt="미국 도서관 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_15.png" alt=""></span>
+                                </div>
+                                <div class="content_block">
+                                    <span class="content_item link"><a href="/product/library"><em class="title">미국<br /> 도서관</em><img src="/images/main/book/l/bg_content_title.png" alt="미국 도서관 바로가기"></a></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_01.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_02.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_03.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_04.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_05.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_06.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_07.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_08.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_09.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_10.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_11.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_12.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_13.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_14.png" alt=""></span>
+                                    <span class="content_item"><img src="/images/main/book/l/content_15.png" alt=""></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="content_wrapper d_none">
+                        <!--S:유치원-->
+                        <li class="content_list kinder swiper" id="contentKinder" dir="ltr">
+                            <div class="content_block swiper-wrapper">
+                                <span class="swiper-slide content_item"><a href="/product/kinder"><img src="/images/main/book/k/content_title.png" alt="미국 유치원 바로가기"></a></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_01.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_02.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_03.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_04.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_05.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_06.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_07.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_08.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_09.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_10.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_11.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_12.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_13.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_14.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/k/content_15.png" alt=""></span>
+                            </div>
+                        </li>
+                        <!--S:초등-->
+                        <li class="content_list element swiper" id="contentElement" dir="rtl">
+                            <div class="auto_slide content_block swiper-wrapper">
+                                <span class="swiper-slide content_item"><a href="/product/element"><img src="/images/main/book/e/content_title.png" alt="미국 초등 바로가기"></a></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_01.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_02.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_03.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_04.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_05.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_06.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_07.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_08.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_09.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_10.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_11.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_12.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_13.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_14.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/e/content_15.png" alt=""></span>
+                            </div>
+                        </li>
+                        <!--S:도서관-->
+                        <li class="content_list library swiper" id="contentLibrary" dir="ltr">
+                            <div class="auto_slide swiper-wrapper">
+                                <span class="swiper-slide content_item"><a href="/product/library"><img src="/images/main/book/l/content_title.png" alt="미국 도서관 바로가기"></a></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_01.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_02.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_03.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_04.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_05.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_06.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_07.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_08.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_09.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_10.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_11.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_12.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_13.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_14.png" alt=""></span>
+                                <span class="swiper-slide content_item"><img src="/images/main/book/l/content_15.png" alt=""></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--S:국내 유일 자체 제작 콘텐츠-->
+            <!--S:pc ver-->
+            <section class="spacing_main record_section d_block d_none_sm">
+                <div class="container">
+                    <ul class="record_block" data-aos="fade-up">
+                        <li>
+                            <div class="main_title_block font_left">
+                                <h3 class="title">
+                                    국내 유일<br />
+                                    <span class="font_yellow">자체 제작</span> 콘텐츠
+                                </h3>
+                                <p class="desc">
+                                    아이 스스로 “영어가 즐겁다!” 고 느끼도록 <br />
+                                    다양한 화풍, 풍성한 음원, <br />
+                                    공감 가득한 이야기를 모두 담았어요.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="record_item video">
+                            <div class="record_video_block">
+                                <i class="ico_play"></i>
+                                <img class="thumbnail" src="/images/main/record/record_main.png" alt="">
+                                <div class="video_wrapper d_none">
+                                    <video class="video_visual"
+                                           autoplay="" loop="" muted="" playsinline="" class="playing kinder-play"
+                                           src="https://player.vimeo.com/progressive_redirect/playback/733486471/rendition/720p/file.mp4?loc=external&signature=c13084813717d80ef0425b06bb43b7798607e5e38e968a0775bcbcc1a00fc250"></video>
+                                    <div class="dimmed"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="record_item square">
+                            <img src="/images/main/record/record_02.png" alt="">
+                        </li>
+                        <li class="record_item square">
+                            <img src="/images/main/record/record_01.png" alt="">
+                        </li>
+                        <li class="record_item square">
+                            <img src="/images/main/record/record_03.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--S:mobile ver-->
+            <section class="spacing_main record_section d_none d_block_sm">
+                <div>
+                    <div class="m_record_block">
+                        <i class="ico_play secondary" onclick="showModal('#recordModal')"></i>
+                        <div class="main_title_block font_white font_left" data-aos="fade-up">
+                            <h3 class="title">
+                                국내 유일<br />
+                                <span class="font_yellow">자체 제작</span> 콘텐츠
+                            </h3>
+                            <p class="desc">
+                                아이 스스로 “영어가 즐겁다!” 고 느끼도록 <br />
+                                다양한 화풍, 풍성한 음원, <br />
+                                공감 가득한 이야기를 모두 담았어요.
+                            </p>
+                        </div>
+                        <img src="/images/main/record/m_record_main.png" alt="">
+                    </div>
+                    <div class="m_record_img_list swiper swiper_container" id="recordSwiper" data-aos="fade-up">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <img src="/images/main/record/record_01.png" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="/images/main/record/record_02.png" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="/images/main/record/record_03.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>   
+            <!--S:모국어 습득방식 ...-->
+            <section class="method_section spacing_main bg_yellow_secondary">
+                <div class="container">
+                    <div class="main_title_block font_center" data-aos="fade-up">
+                        <h3 class="title m_font_left">
+                            <span class="font_yellow">모국어 습득방식 기반</span>의<br class="m_br" /> 콘텐츠 <br class="pc_br" />
+                            무엇이 다를까요?
+                        </h3>
+                    </div>
+                </div>
+                <div id="methodSwiper" class="swiper swiper_right" data-aos="fade-up">
+                    <ul class="swiper-wrapper method_slide_wrapper">
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">동일한 습득환경</p>
+                                <img src="/images/main/method/bg_method_01.png" alt="동일한 습득환경">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_01.png" alt="01"></p>
+                                    <p class="desc">
+                                        영어를 모국어처럼 잘 하려면,<br class="pc_br" />
+                                        <strong>모국어 습득 환경과 동일하게</strong> 영어에 노출되어야 합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">하루평균 4시간</p>
+                                <img src="/images/main/method/bg_method_02.png" alt="하루평균 4시간">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_02.png" alt="02"></p>
+                                    <p class="desc">
+                                        모국어를 습득할 때 아이들은 성인들이 사용하는 <br class="pc_br" />
+                                        어휘 수준으로,<strong>하루 평균 4시간 이상</strong> 모국어에 노출됩니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">현지문화와 정서</p>
+                                <img src="/images/main/method/bg_method_03.png" alt="현지문화와 정서">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_03.png" alt="03"></p>
+                                    <p class="desc">
+                                        진짜 영어 잘 하는 아이로 키우고 싶다면, 단순히 단어와<br class="pc_br" />
+                                        문장을 익히는 것이 아닌 <strong>현지 문화와 정서를 함께 접할 수<br class="pc_br" />
+                                        있는 콘텐츠</strong>로 충분한 노출을  보장해주어야 합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">노출량 점검</p>
+                                <img src="/images/main/method/bg_method_04.png" alt="노출량 점검">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_04.png" alt="03"></p>
+                                    <p class="desc">
+                                        지금 <strong>노출량</strong>만으로 충분한지<br class="pc_br" />
+                                        반드시 <strong>점검</strong>해 보세요.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">인식</p>
+                                <img src="/images/main/method/bg_method_05.png" alt="인식">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_05.png" alt="05"></p>
+                                    <p class="desc">
+                                        아이들이 영어를 <strong>재밌다고 인식하고<br class="pc_br" />
+                                        자연스럽게 스며들 수 있게</strong> 만드는 것이 가장 중요합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">수준 높은 콘텐츠</p>
+                                <img src="/images/main/method/bg_method_06.png" alt="수준 높은 콘텐츠">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_06.png" alt="06"></p>
+                                    <p class="desc">
+                                        미국 아이들도 거리낌없이 볼 수 있는 콘텐츠,<br class="pc_br" />
+                                        미국 문화와 영어의 억양을 <strong>그대로 습득할 수 있는<br class="pc_br" />
+                                        수준 높은 콘텐츠</strong>를 선택해야 합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide method_item">
+                            <div class="method_thumb">
+                                <p class="title">에그스쿨</p>
+                                <img src="/images/main/method/bg_method_07.png" alt="에그스쿨">
+                            </div>
+                            <div class="method_active">
+                                <div class="inner">
+                                    <p class="num"><img src="/images/main/method/ico_num_07.png" alt="07"></p>
+                                    <p class="desc">
+                                        <strong>틀어만 놓아도 영어 환경에 노출</strong>되어<br class="pc_br" />
+                                        영어 소리에 적응하고 입으로 말할 수 있게 만드는 콘텐츠,<br class="pc_br" />
+                                        <strong>에그스쿨</strong>입니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container swiper_paging d_flex">
+                    <div class="number_pagination"></div>
+                    <div class="d_flex m_d_none">
+                        <span class="line_prev"></span>
+                        <span class="line_next"></span>
+                    </div>
+                </div>
+                <div class="bg_01">
+                    <img src="/images/main/char_main_01.png" alt="">
+                </div>
+            </section>
+            <!--S:지금, 바로 이곳이 미국...-->
+            <section class="spacing_main product_section">
+                <div class="container">
+                    <div class="main_title_block font_center" data-aos="fade-up">
+                        <h3 class="title">
+                            지금, <span class="font_yellow">바로 이곳이<br class="m_br" /> 미국</span>이 됩니다.
+                        </h3>
+                        <p class="desc">
+                            미국을 그대로 담아온 영상과 음원으로<br />
+                            아이가 어디에 있든, 그곳이 미국이 됩니다.
+                        </p>
+                    </div>
+                    <div class="p_relative">
+                        <div class="bg_02 m_d_none">
+                            <img src="/images/main/char_main_02.png" alt="">
+                        </div>
+                        <ul class="main_product_block" data-aos="fade-up">
+                            <li class="product_item kinder">
+                                <a href="/product/kinder">
+                                    <div class="info_block">
+                                        <p class="title">유치원 <i class="ico link_arrow"></i></p>
+                                        <p class="desc">
+                                            미국 유치원을 그대로! <br />
+                                            <strong>유아 필수 영어 표현</strong>을 익혀요.
+                                        </p>
+                                    </div>
+                                    <picture>
+                                        <source srcset="/images/main/product/m_product_kinder_bg.png" media="(max-width: 640px)">
+                                        <img src="/images/main/product/product_kinder_bg.png" alt="" >
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="product_item element">
+                                <a href="/product/element">
+                                    <div class="info_block">
+                                        <p class="title">초등 <i class="ico link_arrow"></i></p>
+                                        <p class="desc">
+                                            듣기, 말하기, 쓰기, 읽기를 한번에! <br />
+                                            <strong>미국 초등학생을 일상</strong>을 경험해요.
+                                        </p>
+                                    </div>
+                                    <picture>
+                                        <source srcset="/images/main/product/m_product_element_bg.png" media="(max-width: 640px)">
+                                        <img src="/images/main/product/product_element_bg.png" alt="" >
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="product_item library">
+                                <a href="/product/library">
+                                    <div class="info_block">
+                                        <p class="title">도서관 <i class="ico link_arrow"></i></p>
+                                        <p class="desc">
+                                            세계 명작과 위인, 뮤지컬을 <br />
+                                            <strong>살아있는 이야기와 노래</strong>로 만나요.
+                                        </p>
+                                    </div>
+                                    <picture>
+                                        <source srcset="/images/main/product/m_product_library_bg.png" media="(max-width: 640px)">
+                                        <img src="/images/main/product/product_library_bg.png" alt="" >
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="bg_03 m_d_none">
+                            <img src="/images/main/char_main_03.png" alt="">
+                        </div>
+                        <div class="m_bg_02 d_none m_d_block">
+                            <img src="/images/main/m_char_main_02.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--S:한 눈에 보는 구성...-->
+            <!--S:pc--->
+            <section class="spacing_main bg_yellow_secondary video_section d_block d_none_md">
+                <div class="container p_relative">
+                    <div class="video_wrapper">
+                        <div class="main_title_block" data-aos="fade-up">
+                            <ul class="video_product_block">
+                                <li class="product_name kinder active">유치원</li>
+                                <li class="product_name element">초등</li>
+                                <li class="product_name library">도서관</li>
+                            </ul>
+                            <h3 class="title">
+                                한 눈에 <br class="pc_br" />
+                                보는 <span class="font_yellow">구성</span>
+                            </h3>
+                            <p class="desc">
+                                유치원부터 초등, 영미권 문화까지<br />
+                                많이 보고, 듣고, 말하며 영어를 즐겨요.
+                            </p>
+                        </div>
+                        <div class="video_frame_block">
+                            <div class="video_frame"></div>
+                            <div class="swiper_paging d_flex center">
+                                <span class="btn_circle_prev"></span>
+                                <span class="btn_circle_next"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video_content">
+                        <div id="videoSwiper" class="video_slide_wrapper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/main/video/main_video_01.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/main/video/main_video_01.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/images/main/video/main_video_03.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--E:pc--->
+            <!--S:mo--->
+            <section class="spacing_main video_section d_none d_block_md">
+                <div class="container">
+                    <div class="main_title_block font_center" data-aos="fade-up">
+                        <h3 class="title">
+                            한 눈에 <br class="m_br" />
+                            보는 <span class="font_yellow">구성</span>
+                        </h3>
+                    </div>
+                    <div class="m_video_content" data-aos="fade-up">
+                        <div class="m_video_slide swiper swiper_container" id="mVideoSwiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="video_player">
+                                        <img src="/images/main/video/main_video_01.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="video_player">
+                                        <img src="/images/main/video/main_video_02.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <<div class="video_player">
+                                    <img src="/images/main/video/main_video_03.png" alt="">
+                                </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                        </div>
+                        <div class="m_video_thumb_slide swiper" thumbsSlider="" id="mVideoThumbsSwiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <p class="title">유치원</p>
+                                    <img src="/images/main/video/bg_video_thumb_01.png" alt="유치원">
+                                </li>
+                                <li class="swiper-slide">
+                                    <p class="title">초등</p>
+                                    <img src="/images/main/video/bg_video_thumb_02.png" alt="초등">
+                                </li>
+                                <li class="swiper-slide">
+                                    <p class="title">도서관</p>
+                                    <img src="/images/main/video/bg_video_thumb_03.png" alt="도서관">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--E:mo--->
+            <!--S: 추천해요 pc-->
+            <section class="sticky_section pc_ver d_block d_none_md">
+                <div class="ico_flower top"><img src="/images/icon/bg_flower_02.png" alt=""></div>
+                <div class="ico_flower btm"><img src="/images/icon/bg_flower.png" alt=""></div>
+                <div class="container d_flex">
+                    <div class="sticky_wrapper spacing_main">
+                        <ul class="sticky_nav">
+                            <li class="sticky_link active"><a href="#recommend">추천해요</a></li>
+                            <li class="sticky_link"><a href="#online">언제 어디서나</a></li>
+                            <li class="sticky_link"><a href="#review">경험해보세요</a></li>
+                        </ul>
+                    </div>
+                    <div class="content_wrapper">
+                        <!--S:추천해요-->
+                        <article class="recommend_section spacing_main" id="recommend">
+                            <div class="title_block">
+                                <h4 class="title">
+                                    이런 학부모님께 <br />
+                                    <strong class="font_600">추천</strong>해요!
+                                </h4>
+                                <p class="desc"></p>
+                            </div>
+                            <ul class="recommend_list_block">
+                                <li class="recommend_item" data-aos="zoom-in-right" data-aos-duration="1500">
+                                    <p class="desc">
+                                        <em class="font_point">영어 유치원</em> 혹은 <em class="font_point">국제학교</em>를 보내고 있거나, <br />
+                                        보낼 지 <em class="font_point">고민 중</em>이신 분
+                                    </p>
+                                </li>
+                                <li class="recommend_item" data-aos="zoom-in-left" data-aos-duration="1700">
+                                    <p class="desc">
+                                        모국어처럼 <em class="font_point">자연스러운 <br />
+                                        언어 습득 콘텐츠</em>를 찾고 계신 분
+                                    </p>
+                                </li>
+                                <li class="recommend_item" data-aos="zoom-in-right" data-aos-duration="1900">
+                                    <p class="desc">
+                                        아이가 영어에 <em class="font_point">흥미를 잃을까 <br />
+                                        걱정</em>이신 분
+                                    </p>
+                                </li>
+                            </ul>
+                        </article>
+                        <!--E:추천해요-->
+                        <!--S:언제 어디서나-->
+                        <article class="online_section spacing_main" id="online">
+                            <div class="title_block">
+                                <h4 class="title">
+                                    언제 어디서나 <br />
+                                    <strong class="font_600">에그스쿨과 함께</strong>할 수 있어요.
+                                </h4>
+                                <p class="desc">
+                                    등원·등교 준비할 때, 잠들기 전 잠자리에서, 차 타고 이동할 때 <br />
+                                    밥 먹을 때, 그 밖의 모든 일상에서 에그스쿨과 함께 해요!
+                                </p>
+                            </div>
+                            <div>
+                                <ul class="online_img_block">
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_01.png" alt="">
+                                    </li>
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_02.png" alt="">
+                                    </li>
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_03.png" alt="">
+                                    </li>
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_04.png" alt="">
+                                    </li>
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_05.png" alt="">
+                                    </li>
+                                    <li class="online_img">
+                                        <img src="/images/main/online/online_06.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <!--E:언제 어디서나-->
+                        <!--S:경험해보세요-->
+                        <article class="review_section spacing_main" id="review">
+                            <div class="title_block">
+                                <h4 class="title">
+                                    우리 아이에게 생기는 <br />
+                                    <strong class="font_600">변화를 경험</strong>해보세요.
+                                </h4>
+                            </div>
+                            <div class="review_list_wrapper">
+                                <ul class="review_list">
+                                    <li class="review_box">
+                                        <div class="review_thumb">
+                                            <img src="/images/main/review/review_01.png" alt="">
+                                        </div>
+                                        <div class="review_desc">
+                                            <p class="desc">
+                                                에그스쿨 영상이 아이들 시선에서는 <br />
+                                                재미있는지 <strong class="font_point">영상보는 내내 깔깔대며 웃고 <br />
+                                                초집중 모드</strong>더라고요~ 리딩북도 대화하듯 <br />
+                                                읽어 주셔서 경험해본 유아영어 컨텐츠 중에 <br />
+                                                가장 영어유치원에 가깝다는 느낌을 받았어요. <br />
+                                            </p>
+                                            <p class="author">이름</p>
+                                        </div>
+                                    </li>
+                                    <li class="review_box">
+                                        <div class="review_thumb">
+                                            <img src="/images/main/review/review_03.png" alt="">
+                                        </div>
+                                        <div class="review_desc">
+                                            <p class="desc">
+                                                <strong class="font_point">매달 책과 워크지가 오니 부담</strong>이 적고, <br />
+                                                공간 차지도 덜 해서 좋다 . <br />
+                                                애니메이션이 없어서 싫어하면 어쩌나 <br />
+                                                걱정 했는데 걱정과 달리 <strong class="font_point">너~ 무 좋아한다.</strong>
+                                            </p>
+                                            <p class="author">이름</p>
+                                        </div>
+                                    </li>
+                                    <li class="review_box">
+                                        <div class="review_thumb">
+                                            <img src="/images/main/review/review_05.png" alt="">
+                                        </div>
+                                        <div class="review_desc">
+                                            <p class="desc">
+                                                일상에서 유치원에서 자주 접하는 표현과 <br />
+                                                어휘가 반복되어 자연스럽게 발화할 수 있게 <br />
+                                                도와줍니다. 평일은 영어로 된 영상만 허락해
+                                                줘서 그런지 다른것보다 <strong class="font_point">에그스쿨을 찾아서 <br />
+                                                보고 율동도 따라하네요!</strong>
+                                            </p>
+                                            <p class="author">이름</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="review_list">
+                                    <li class="review_box">
+                                        <div class="review_thumb">
+                                            <img src="/images/main/review/review_02.png" alt="">
+                                        </div>
+                                        <div class="review_desc">
+                                            <p class="desc">
+                                                실제 아이들이 겪는 에
+                                                피소드와 함께 조금 더 <br />
+                                                다양한 상황도 대입해보고 <strong class="font_point">노래와 춤 등으로 <br />
+                                                더 재미있는 놀이영어도 가능</strong>해서 좋아요! <br />
+                                                영상처럼 혼자 한시간도 거뜬하게 놀면서 <br />
+                                                영어를 접하니까 더 마음에 들어요. <br />
+                                            </p>
+                                            <p class="author">이름</p>
+                                        </div>
+                                    </li>
+                                    <li class="review_box">
+                                        <div class="review_thumb">
+                                            <img src="/images/main/review/review_04.png" alt="">
+                                        </div>
+                                        <div class="review_desc">
+                                            <p class="desc">
+                                                4권의 각기 다른 주제의 <strong class="font_point">그림책과 그림책별로 <br />
+                                                활동자료가 제공</strong>되어 좋아요! <br />
+                                                어플에서 노래 흘려듣기도 가능하고, 원어민이 <br />
+                                                나오는 에피소드 영상도 흥미로워했어요!
+                                            </p>
+                                            <p class="author">이름</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <!--E:경험해보세요-->
+                    </div>
+                </div>
+            </section>
+            <!--E: 추천해요 pc-->
+            <!--S:추천해요 mo-->
+            <section class="sticky_section mo_ver d_none d_block_md">
+                <div class="container">
+                    <article class="recommend_section spacing_main">
+                        <div class="title_block">
+                            <h4 class="title">
+                                이런 학부모님께 <br />
+                                <strong class="font_600">추천</strong>해요!
+                            </h4>
+                            <p class="desc"></p>
+                        </div>
+                        <ul class="recommend_list_block">
+                            <li class="recommend_item" data-aos="zoom-in-right" data-aos-duration="1500">
+                                <p class="desc">
+                                    <em class="font_point">영어 유치원</em> 혹은 <em class="font_point">국제학교</em>를 보내고 있거나, <br />
+                                    보낼 지 <em class="font_point">고민 중</em>이신 분
+                                </p>
+                            </li>
+                            <li class="recommend_item" data-aos="zoom-in-left" data-aos-duration="1700">
+                                <p class="desc">
+                                    모국어처럼 <em class="font_point">자연스러운 <br />
+                                    언어 습득 콘텐츠</em>를 찾고 계신 분
+                                </p>
+                            </li>
+                            <li class="recommend_item" data-aos="zoom-in-right" data-aos-duration="1900">
+                                <p class="desc">
+                                    아이가 영어에 <em class="font_point">흥미를 잃을까 <br />
+                                    걱정</em>이신 분
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <!--S:언제 어디서나-->
+            <section class="sticky_section mo_ver bg_online d_none d_block_md">
+                <div class="container">
+                    <!--S:언제 어디서나-->
+                    <article class="online_section spacing_main">
+                        <div class="title_block">
+                            <h4 class="title">
+                                언제 어디서나 <br />
+                                <strong class="font_600">에그스쿨과 함께</strong><br class="mo_br" />
+                                할 수 있어요.
+                            </h4>
+                            <p class="desc">
+                                등원·등교 준비할 때, 잠들기 전 잠자리에서,<br class="mo_br" /> 차 타고 이동할 때 <br class="pc_br" />
+                                밥 먹을 때, 그 밖의 모든 일상에서<br class="mo_br" /> 에그스쿨과 함께 해요!
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="online_img_block observe">
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_01.png" alt="">
+                                </li>
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_02.png" alt="">
+                                </li>
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_03.png" alt="">
+                                </li>
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_04.png" alt="">
+                                </li>
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_05.png" alt="">
+                                </li>
+                                <li class="online_img">
+                                    <img src="/images/main/online/online_06.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!--E:언제 어디서나-->
+                </div>
+            </section>
+            <!--S:경험해보세요-->
+            <section class="sticky_section mo_ver bg_review d_none d_block_md">
+                <div class="container">
+                    <!--S:경험해보세요-->
+                    <article class="review_section spacing_main">
+                        <div class="title_block">
+                            <h4 class="title">
+                                우리 아이에게 생기는 <br />
+                                <strong class="font_600">변화를 경험</strong>해보세요.
+                            </h4>
+                        </div>
+                        <div class="review_list_wrapper swiper swiper_container" id="reviewSwiper" data-aos="fade-up">
+                            <ul class="review_list swiper-wrapper">
+                                <li class="review_box swiper-slide">
+                                    <div class="review_thumb">
+                                        <img src="/images/main/review/review_01.png" alt="">
+                                    </div>
+                                    <div class="review_desc">
+                                        <p class="desc">
+                                            에그스쿨 영상이 아이들 시선에서는 <br class="pc_br" />
+                                            재미있는지 <strong class="font_point">영상보는 내내 깔깔대며 웃고 <br class="pc_br" />
+                                            초집중 모드</strong>더라고요~ <br class="mo_br" /> 리딩북도 대화하듯 <br class="pc_br" />
+                                            읽어 주셔서 경험해본 유아영어 컨텐츠 중에 <br class="pc_br" />
+                                            가장 영어유치원에 가깝다는 느낌을 받았어요. <br class="pc_br" />
+                                        </p>
+                                        <p class="author">이름</p>
+                                    </div>
+                                </li>
+                                <li class="review_box swiper-slide">
+                                    <div class="review_thumb">
+                                        <img src="/images/main/review/review_02.png" alt="">
+                                    </div>
+                                    <div class="review_desc">
+                                        <p class="desc">
+                                            실제 아이들이 겪는 에피소드와 함께 조금 더 <br class="pc_br" />
+                                            다양한 상황도 대입해보고 <br class="mo_br" /><strong class="font_point">노래와 춤 등으로 <br class="pc_br" />
+                                            더 재미있는 놀이영어도 가능</strong>해서 좋아요! <br class="pc_br" />
+                                            영상처럼 혼자 한시간도 거뜬하게 놀면서 <br class="pc_br" />
+                                            영어를 접하니까 더 마음에 들어요.
+                                        </p>
+                                        <p class="author">이름</p>
+                                    </div>
+                                </li>
+                                <li class="review_box swiper-slide">
+                                    <div class="review_thumb">
+                                        <img src="/images/main/review/review_03.png" alt="">
+                                    </div>
+                                    <div class="review_desc">
+                                        <p class="desc">
+                                            <strong class="font_point">매달 책과 워크지가 오니 부담</strong>이 적고, <br class="pc_br" />
+                                            공간 차지도 덜 해서 좋다 . <br class="pc_br" />
+                                            애니메이션이 없어서 싫어하면 어쩌나 <br class="pc_br" />
+                                            걱정 했는데 걱정과 달리 <strong class="font_point">너~ 무 좋아한다.</strong>
+                                        </p>
+                                        <p class="author">이름</p>
+                                    </div>
+                                </li>
+                                <li class="review_box swiper-slide">
+                                    <div class="review_thumb">
+                                        <img src="/images/main/review/review_05.png" alt="">
+                                    </div>
+                                    <div class="review_desc">
+                                        <p class="desc">
+                                            일상에서 유치원에서 자주 접하는 표현과 <br class="pc_br" />
+                                            어휘가 반복되어 자연스럽게 발화할 수 있게 <br class="pc_br" />
+                                            도와줍니다. 평일은 영어로 된 영상만 허락해
+                                            줘서 그런지 다른것보다 <strong class="font_point">에그스쿨을 찾아서 <br class="pc_br" />
+                                            보고 율동도 따라하네요!</strong>
+                                        </p>
+                                        <p class="author">이름</p>
+                                    </div>
+                                </li>
+                                <li class="review_box swiper-slide">
+                                    <div class="review_thumb">
+                                        <img src="/images/main/review/review_04.png" alt="">
+                                    </div>
+                                    <div class="review_desc">
+                                        <p class="desc">
+                                            4권의 각기 다른 주제의 <strong class="font_point">그림책과 그림책별로 <br class="pc_br" />
+                                            활동자료가 제공</strong>되어 좋아요! <br />
+                                            어플에서 노래 흘려듣기도 가능하고, 원어민이 <br class="pc_br" />
+                                            나오는 에피소드 영상도 흥미로워했어요!
+                                        </p>
+                                        <p class="author">이름</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </article>
+                    <!--E:경험해보세요-->
+                </div>
+            </section>
+            <!--E:추천해요 mo-->
+            <!--S:이벤트-->
+            <section class="spacing_main event_section">
+                <div class="container">
+                    <!--S:pc only-->
+                    <div class="event_pagination d_flex m_d_none" data-aos="fade-up">
+                        <button class="paging active" type="button">에그스쿨 리뉴얼<br /> 기념 이벤트</button>
+                        <button class="paging" type="button">첫 고객 프리미엄<br /> 에그스쿨 kit 증정</button>
+                        <button class="paging" type="button">에그스쿨 학습<br /> 가이드</button>
+                    </div>
+                    <!--E:pc only-->
+                    <!--S:mobile only-->
+                    <div class="main_title_block md d_none m_d_block" data-aos="fade-up">
+                        <h4 class="title">에그스쿨 <span class="font_yellow">이벤트</span></h4>
+                    </div>
+                    <!--E:mobile only-->
+                    <div id="eventSwiper" class="event_slide_wrapper swiper swiper_container" data-aos="fade-up">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="/images/m_event_sample.png" media="(max-width: 640px)">
+                                        <img src="/images/event_sample.png" alt="" >
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="/images/m_event_sample.png" media="(max-width: 640px)">
+                                        <img src="/images/event_sample.png" alt="" >
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="/images/m_event_sample.png" media="(max-width: 640px)">
+                                        <img src="/images/event_sample.png" alt="" >
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--E:이벤트-->
+            <!--S:에그스쿨 새소식-->
+            <section class="spacing_main notice_section">
+                <div class="container d_flex m_column">
+                    <div class="main_title_block md m_d_flex align_end" data-aos="fade-up">
+                        <h4 class="title">에그스쿨 <span class="font_yellow">새소식</span></h4>
+                        <span class="underline"><a href="/community/notice">MORE VIEW +</a></span>
+                    </div>
+                    <div class="notice_block" data-aos="fade-up">
+                        <article class="notice_item">
+                            <a href="#">
+                                <h6 class="title">에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내/에그스쿨 추석 연휴 배송 안내</h6>
+                                <span class="date">2023.06.27</span>
+                            </a>
+                        </article>
+                        <article class="notice_item">
+                            <a href="#">
+                                <h6 class="title">에그스쿨 추석 연휴 배송 안내</h6>
+                                <span class="date">2023.06.27</span>
+                            </a>
+                        </article>
+                        <article class="notice_item">
+                            <a href="#">
+                                <h6 class="title">유치원 월별 구독 상품 결제일 관련 안내</h6>
+                                <span class="date">2023.06.27</span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!--E:에그스쿨 새소식-->
+            <!--S:소통해요, 에그스쿨-->
+            <section class="spacing_main sns_section">
+                <div class="container">
+                    <div class="main_title_block md" data-aos="fade-up">
+                        <h4 class="title"><span class="font_yellow">소통해요,</span> 에그스쿨</h4>
+                    </div>
+                    <div id="snsSwiper" class="sns_slide_wrapper swiper swiper_container" data-aos="fade-up">
+                        <div class="swiper-wrapper">
+                            <article class="swiper-slide sns_slide">
+                                <a href="" class="sns_item">
+                                    <div class="sns_id"><i class="ico instar"></i><span class="author">Egg School</span></div>
+                                    <div class="sns_thumbnail">
+                                        <img src="/images/sample.png" alt="">
+                                    </div>
+                                    <p class="desc">
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                    </p>
+                                </a>
+                            </article>
+                            <article class="swiper-slide sns_slide">
+                                <a href="" class="sns_item">
+                                    <div class="sns_id"><i class="ico youtube"></i><span class="author">Egg School</span></div>
+                                    <div class="sns_thumbnail">
+                                        <img src="/images/sample.png" alt="">
+                                    </div>
+                                    <p class="desc">
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                    </p>
+                                </a>
+                            </article>
+                            <article class="swiper-slide sns_slide">
+                                <a href="" class="sns_item">
+                                    <div class="sns_id"><i class="ico youtube"></i><span class="author">Egg School</span></div>
+                                    <div class="sns_thumbnail">
+                                        <img src="/images/sample.png" alt="">
+                                    </div>
+                                    <p class="desc">
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                    </p>
+                                </a>
+                            </article>
+                            <article class="swiper-slide sns_slide">
+                                <a href="" class="sns_item">
+                                    <div class="sns_id"><i class="ico youtube"></i><span class="author">Egg School</span></div>
+                                    <div class="sns_thumbnail">
+                                        <img src="/images/sample.png" alt="">
+                                    </div>
+                                    <p class="desc">
+                                        에그스쿨 유치원 120% 활용백서 전격 공개!
+                                        120% 활용백서 전격 공개
+                                    </p>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--E:소통해요, 에그스쿨-->
+        </div>
+        <!--S:콘텐츠 모달-->
+        <div class="modal full video" id="recordModal">
+            <div class="modal_content">
+                <div class="modal_body">
+                    <div class="head">
+                        <button class="btn_close" onclick="closeModal('#recordModal')"><i class="ico_close"></i></button>
+                    </div>
+                    <div class="body">
+                        <video playsinline
+                        controls
+                        controlsList = "nodownload"
+                        class="video_source"
+                        src="https://player.vimeo.com/progressive_redirect/playback/551333991/rendition/720p/file.mp4?loc=external&log_user=0&signature=bb89643650b5a4c4fef48a2caefdad41524f80e1a8ce4474f8a5302ac8066280">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--E:콘텐츠 모달-->
+    </main>
+    <!--S:footer-->
+    <footer class="footer">
+        <div class="fnb_top_block border_btm">
+            <div class="container d_flex">
+                <ul>
+                    <li class="terms_link"><a href="https://docs.google.com/document/d/e/2PACX-1vR0-fRTqpnP3VTZkx_SjRdQ8jxmDFuOm8ydXe4GmCLsrsbKGxG9DJOGGYKMhPmLsCapIa0Bo5EYRhDe/pub" target="_blank">이용약관</a></li>
+                    <li class="terms_link"><a href="https://docs.google.com/document/u/2/d/e/2PACX-1vR5WssFOjfXb5slk5eRm9aB1Cxumk2hHMwGUvSjpG3lSAhPWXscJyLaNHECx26a0k-oK6pCKVzvKczy/pub" target="_blank">개인정보 취급방침</a></li>
+                </ul>
+                <div class="fms_wrapper">
+                    <button type="button" onclick="toggleFamilySite()" class="btn_fms">Family Site &nbsp;&nbsp; +</button>
+                    <ul class="fms_link_block">
+                        <li class="fms_link"><a href="https://www.englishegg.com/" target="_blank">잉글리시에그</a></li>
+                        <li class="fms_link"><a href="https://www.englishegg.com/eggproduct/expression_line/story.php" target="_blank">영어놀이 센터</a></li>
+                        <li class="fms_link"><a href="https://eggschool.net/" target="_blank">에그스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fnb_btm_block">
+            <div class="container d_flex m_column_reverse">
+                <div>
+                    <h2 class="f_logo m_d_none"><img src="/images/f_logo.png" alt="Egg School"></h2>
+                    <!--pc-->
+                    <ul class="fnb_info_block m_d_none d_block">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <span class="division">대표자  송진우</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                    <!-- mo -->
+                    <ul class="fnb_info_block m_d_block d_none">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표자  송진우</span>
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                </div>
+                <div class="d_flex">
+                    <div class="cs_block">
+                        <dl class="fnb_number">
+                            <dt class="title">고객센터</dt>
+                            <dd class="number">1566-4957</dd>
+                        </dl>
+                        <ul class="fnb_info_block">
+                            <li class="fnb_info">평일   10:00 ~ 17:00  (주말 / 공휴일 휴무)</li>
+                            <li class="fnb_info">점심   12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <ul class="sns_link_block">
+                        <li class="sns_link"><a href="https://cafe.naver.com/eggschoolk" target="_blank"><img src="/images/icon/ico_sns_cafe.png" alt="네이버 카페"></a></li>
+                        <li class="sns_link"><a href="https://www.instagram.com/eggschool_k/" target="_blank"><img src="/images/icon/ico_sns_instar.png" alt="인스타그램"></a></li>
+                        <li class="sns_link"><a href="https://www.youtube.com/channel/UC6te0BNTwvi8DDXeROUlSIg" target="_blank"><img src="/images/icon/ico_sns_youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--E:footer-->
+</div>
+<script>
+    AOS.init({
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        offset: 100, // offset (in px) from the original trigger point
+        delay: 5, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+    });
+</script>
+</body>
+</html>

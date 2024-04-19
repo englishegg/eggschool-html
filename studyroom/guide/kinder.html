@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>유치원 학습 가이드북</title>
+    <!--S:fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <!--S: Swiper CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--S: gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--E:fonts-->
+    <link rel="stylesheet" href="/css/common.css">
+<!--    <link rel="stylesheet" href="/css/main.css">-->
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/guide.css">
+    <script src="/js/modal.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--S:header-->
+    <header class="header none_transparent">
+        <a href="/"><img src="/images/logo.png" alt="Egg School"></a>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="d_flex utill_menu_block">
+            <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            <button type="button" class="utill_menu" onclick="toggleMySchool()">My School
+                <ul class="mypage_link_block">
+                    <li class="mypage_link logout">로그아웃</li>
+                    <li class="mypage_link"><a href="/myschool/userinfo">회원정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                    <li class="mypage_link"><a href="/myschool/paylist">결제내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/delivery">배송내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/dataroom">자료실</a></li>
+                    <li class="mypage_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <!--S:mobile-->
+    <header class="m_header none_transparent">
+        <div class="logo"><a href="/"><img src="/images/logo.png" alt="Egg School"></a></div>
+        <div class="m_menu_block">
+            <div class="utill_menu_block">
+                <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            </div>
+            <button class="btn_nav" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="m_nav_wrapper">
+        <div class="nav_top d_flex align_center">
+            <div class="login_block">
+                <img class="logo" src="/images/logo.png" alt="Egg School">
+                <p class="login_txt"><a href="/login" class="font_600">로그인</a>해주세요</p>
+            </div>
+            <button class="btn_nav open" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">My School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/myschool/userinfo">회원정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                        <li class="lnb_link"><a href="/myschool/paylist">결제내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/delivery">배송내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/dataroom">자료실</a></li>
+                        <li class="lnb_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dimmed" onclick="handleMobileNav(this)"></div>
+    <!--E:header-->
+    <main class="main_content kinder guide">
+        <!--S:link_block-->
+        <section class="product_link_wrapper">
+            <ul class="product_link_block">
+                <li class="product_link kinder active"><a href="/product/kinder">유치원</a></li>
+                <li class="product_link element"><a href="/product/element">초등</a></li>
+                <li class="product_link library"><a href="/product/library">도서관</a></li>
+            </ul>
+        </section>
+        <!--E:link_block-->
+        <!--S:guide-->
+        <section class="guide_wrapper">
+            <article class="cover_block">
+                <div class="thumb_block">
+                    <img src="/images/guide/kinder/img_top_guide_red.png" alt="">
+                </div>
+                <div class="inner">
+                    <h4 class="greeting" data-aos="fade-up">
+                        Welcome to
+                        <em class="font_point">EGG School!</em>
+                    </h4>
+                    <h2 class="title" data-aos="fade-up">
+                        <p class="sub_title">에그스쿨 유치원 입문자를 위한</p>
+                        유치원 학습 가이드북
+                    </h2>
+                    <div class="thumb_block img_cover" data-aos="fade-up">
+                        <img src="/images/guide/kinder/char_guide_kinder.png" alt="">
+                    </div>
+                </div>
+            </article>
+            <article class="step_block">
+                <div class="title_block" data-aos="fade-up">
+                    <h2 class="title">매월 배송되는 패키지</h2>
+                </div>
+                <p class="desc md font_center" data-aos="fade-up">
+                    매월 초, 4개의 에피소드가 담긴<br />
+                    <em class="font_point">스토리북 4권 & 활동자료 4종</em>이 배송돼요.
+                </p>
+                <div class="thumb_block img_package" data-aos="fade-up">
+                    <img src="/images/guide/kinder/img_guide_package.png" alt="">
+                </div>
+                <p class="desc font_center" data-aos="fade-up">
+                    <strong class="font_700">* 풀 세트 구매 시,</strong><br />
+                    1년치,2년치 학습분량을 한꺼번에 받아<br />
+                    양에 놀라실 수 있으니 책상 한 켠을 비워주세요.
+                </p>
+            </article>
+            <!--S:교재 받은 후-->
+            <article class="step_block">
+                <div class="title_block" data-aos="fade-up">
+                    <h3 class="title">교재 받은 후</h3>
+                    <h4 class="sub_title">앱 다운받기</h4>
+                </div>
+                <ul>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">01</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/img_eggschool_app.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                구글 플레이스토어 혹은<br />
+                                앱스토어에서 <em class="font_point">에그스쿨</em><br />
+                                검색 후 앱 다운받기
+                                <span class="subscript star">핸드폰, 태블릿에서만 이용 가능</span>
+                            </p>
+                            <ul class="app_link_block">
+                                <li>
+                                    <button onclick="redirectToAppStore('android')">
+                                        <img src="/images/icon/ico_googlePlay.png" alt="구글플레이 다운로드"/>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="redirectToAppStore('ios')">
+                                        <img src="/images/icon/ico_appStore.png" alt="앱스토어 다운로드"/>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">02</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/img_app_login.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                에그스쿨 가입 시 사용한<br />
+                                이메일, 비밀번호를 입력하여<br />
+                                <em class="font_point">로그인</em>을 하세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">03</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_app_main.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                매월 제공되는 에피소드 관련<br />
+                                콘텐츠의 <em class="font_point">영상과 음원</em>을<br />
+                                즐길 수 있어요.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <!--E:교재 받은 후-->
+            <!--S:본격적으로 학습하기-->
+            <article class="step_block">
+                <div class="title_block" data-aos="fade-up">
+                    <h3 class="title">본격적으로 학습하기</h3>
+                </div>
+                <ul>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">01</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step02_01.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <h6 class="title">스토리북 읽기</h6>
+                            <p class="desc">
+                                스토리북을 한 장씩 넘기며<br />
+                                따라 읽고 영어 소리에<br />
+                                익숙해져요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">02</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step02_02.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <h6 class="title">영상 시청하기</h6>
+                            <p class="desc">
+                                스토리북을 드라마,노래로<br />
+                                재구성한 영상을 보여주세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">03</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step02_03.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <h6 class="title">활동자료로 놀기</h6>
+                            <p class="desc">
+                                스토리북,영상에서 반복된<br />
+                                영어 표현을 활용하여 활동<br />
+                                자료로 놀면서 말해보아요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">04</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step02_04.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <h6 class="title">에그스쿨 펜 이용하기</h6>
+                            <p class="desc">
+                                스토리북, Audio/Video<br />
+                                카드를 콕 찍어<br />
+                                음원과 영상을 보세요.
+                                <span class="subscript">
+                                <em class="font_point">Tip.</em> 음원을 따라 말하고 녹음도 해보며<br />
+                                영어 자신감을 키워주세요.
+                            </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <h6 class="num">05</h6>
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step02_05.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <h6 class="title">영어 섬취감 키우기 </h6>
+                            <p class="desc">
+                                하나의 에피소드를 모두<br />
+                                완료한 후, 진도 포스터에<br />
+                                스티커를 붙이며 포스터를<br />
+                                완성해보세요.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <!--E:본격적으로 학습하기-->
+            <article class="step_block">
+                <div class="title_block" data-aos="fade-up">
+                    <h3 class="title">에그스쿨 100% 활용하기</h3>
+                    <h4 class="sub_title">
+                        <em class="border observe">영어 노출량</em>에 따라<br />
+                        아이의 발화 성장 속도가 달라져요.
+                    </h4>
+                </div>
+                <ul>
+                    <li class="step_box" data-aos="fade-up">
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step03_01.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                <em class="font_point">아침, 점심, 저녁, 자기 전</em><br />
+                                에그스쿨 영상을 노출시켜<br />
+                                주세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step03_02.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                <em class="font_point">식당, 차 안 등 야외에서도</em><br />
+                                에그스쿨 영상, 오디오를<br />
+                                틀어주세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="step_box" data-aos="fade-up">
+                        <div class="thumb_block">
+                            <img src="/images/guide/kinder/img_step03_03.png" alt="">
+                        </div>
+                        <div class="info_block">
+                            <p class="desc">
+                                Audio/Video카드와<br />
+                                에그스쿨 펜을 들고 다니며<br />
+                                <em class="font_point">듣고 싶은 영상과 노래를 직접<br />
+                                선택</em>할 수 있도록 해주세요.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <!--E:guide-->
+    </main>
+    <!--S:footer-->
+    <footer class="footer">
+        <div class="fnb_top_block border_btm">
+            <div class="container d_flex">
+                <ul>
+                    <li class="terms_link"><a href="https://docs.google.com/document/d/e/2PACX-1vR0-fRTqpnP3VTZkx_SjRdQ8jxmDFuOm8ydXe4GmCLsrsbKGxG9DJOGGYKMhPmLsCapIa0Bo5EYRhDe/pub" target="_blank">이용약관</a></li>
+                    <li class="terms_link"><a href="https://docs.google.com/document/u/2/d/e/2PACX-1vR5WssFOjfXb5slk5eRm9aB1Cxumk2hHMwGUvSjpG3lSAhPWXscJyLaNHECx26a0k-oK6pCKVzvKczy/pub" target="_blank">개인정보 취급방침</a></li>
+                </ul>
+                <div class="fms_wrapper">
+                    <button type="button" onclick="toggleFamilySite()" class="btn_fms">Family Site &nbsp;&nbsp; +</button>
+                    <ul class="fms_link_block">
+                        <li class="fms_link"><a href="https://www.englishegg.com/" target="_blank">잉글리시에그</a></li>
+                        <li class="fms_link"><a href="https://www.englishegg.com/eggproduct/expression_line/story.php" target="_blank">영어놀이 센터</a></li>
+                        <li class="fms_link"><a href="https://eggschool.net/" target="_blank">에그스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fnb_btm_block">
+            <div class="container d_flex m_column_reverse">
+                <div>
+                    <h2 class="f_logo m_d_none"><img src="/images/f_logo.png" alt="Egg School"></h2>
+                    <!--pc-->
+                    <ul class="fnb_info_block m_d_none d_block">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <span class="division">대표자  송진우</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                    <!-- mo -->
+                    <ul class="fnb_info_block m_d_block d_none">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표자  송진우</span>
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                </div>
+                <div class="d_flex">
+                    <div class="cs_block">
+                        <dl class="fnb_number">
+                            <dt class="title">고객센터</dt>
+                            <dd class="number">1566-4957</dd>
+                        </dl>
+                        <ul class="fnb_info_block">
+                            <li class="fnb_info">평일   10:00 ~ 17:00  (주말 / 공휴일 휴무)</li>
+                            <li class="fnb_info">점심   12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <ul class="sns_link_block">
+                        <li class="sns_link"><a href="https://cafe.naver.com/eggschoolk" target="_blank"><img src="/images/icon/ico_sns_cafe.png" alt="네이버 카페"></a></li>
+                        <li class="sns_link"><a href="https://www.instagram.com/eggschool_k/" target="_blank"><img src="/images/icon/ico_sns_instar.png" alt="인스타그램"></a></li>
+                        <li class="sns_link"><a href="https://www.youtube.com/channel/UC6te0BNTwvi8DDXeROUlSIg" target="_blank"><img src="/images/icon/ico_sns_youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--E:footer-->
+</div>
+<script>
+    AOS.init({
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        offset: 100, // offset (in px) from the original trigger point
+        delay: 5, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+    });
+</script>
+</body>
+</html>

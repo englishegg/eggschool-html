@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>초등</title>
+    <!--S:fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <!--S: Swiper CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--S: gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <!--E:fonts-->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <script src="/js/modal.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--S:header-->
+    <header class="header">
+        <a href="/"><img src="/images/logo.png" alt="Egg School"></a>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="d_flex utill_menu_block">
+            <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            <button type="button" class="utill_menu" onclick="toggleMySchool()">My School
+                <ul class="mypage_link_block">
+                    <li class="mypage_link logout">로그아웃</li>
+                    <li class="mypage_link"><a href="/myschool/userinfo">회원정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                    <li class="mypage_link"><a href="/myschool/paylist">결제내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/delivery">배송내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/dataroom">자료실</a></li>
+                    <li class="mypage_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <!--S:mobile-->
+    <header class="m_header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" alt="Egg School"></a></div>
+        <div class="m_menu_block">
+            <div class="utill_menu_block">
+                <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            </div>
+            <button class="btn_nav" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="m_nav_wrapper">
+        <div class="nav_top d_flex align_center">
+            <div class="login_block">
+                <img class="logo" src="/images/logo.png" alt="Egg School">
+                <p class="login_txt"><a href="/login" class="font_600">로그인</a>해주세요</p>
+            </div>
+            <button class="btn_nav open" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">My School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/myschool/userinfo">회원정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                        <li class="lnb_link"><a href="/myschool/paylist">결제내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/delivery">배송내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/dataroom">자료실</a></li>
+                        <li class="lnb_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dimmed"></div>
+    <!--E:header-->
+    <main class="main_content element product">
+        <section class="sub_visual_wrapper">
+            <div class="sub_title_block">
+                <div class="inner">
+                    <h2 class="title">초등</h2>
+                    <p class="desc">
+                        Holly, Harry & Tony 풀패키지는 <br />
+                        총 40개의 에피소드로 구성되어 있으며,<br />
+                        <strong class="font_bold">에피소드별 다양한 주제로 초등 필수 영어 표현을 학습</strong>해요.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="product_link_wrapper">
+            <ul class="product_link_block">
+                <li class="product_link kinder"><a href="/product/kinder">유치원</a></li>
+                <li class="product_link element active"><a href="/product/element">초등</a></li>
+                <li class="product_link library"><a href="/product/library">도서관</a></li>
+            </ul>
+        </section>
+        <section class="product_detail_wrapper spacing_product">
+            <div class="container">
+                <h3 class="product_title" data-aos="fade-up">
+                    <strong class="font_point">초등 학습 전용<br class="m_br" /> 애니메이션과 시트콤</strong>으로<br class="m_br" />
+                    영미권 문화와 교과 표현을<br class="m_br" /> 쉽고 재미있게 익혀보세요.
+                </h3>
+                <div class="product_thumb_box" data-aos="fade-up">
+                    <img src="/images/product/img_product_element.png" alt="">
+                    <div class="font_right">
+                        <button class="btn_detail" onclick="showModal('#productDetailModal')"><i class="ico_search"></i> 제품 구성 상세 안내</button>
+                    </div>
+                </div>
+            </div>
+            <aside class="modal header_gray" id="productDetailModal">
+                <div class="modal_content">
+                    <div class="modal_body">
+                        <div class="title_block">
+                            <div class="font_right">
+                                <button class="btn_close" onclick="closeModal('#productDetailModal')"><i class="ico_close"></i></button>
+                            </div>
+                            <p class="title">제품 상세 안내</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="detail_list_wrapper">
+                                <p class="main_title">[ 애니메이션 Holly, Harry, Tony의 하루 ]</p>
+                                <dl class="detail_box gray">
+                                    <dt class="title">영상 120편</dt>
+                                    <dd class="desc">
+                                        애니메이션 20편 / Mini Sitcom 80편 / Song Time 20편<br class="pc_br" />
+                                        <p>* 영상은 PC 뿐 아니라 앱에서도 시청 가능합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="detail_box gray">
+                                    <dt class="title">디지털콘텐츠</dt>
+                                    <dd class="desc">
+                                        Song Studio / World Contest / Quiz Time / <br class="pc_br" />
+                                        EGG Studio / Timeline / Video / Audio / E-Book
+                                    </dd>
+                                </dl>
+                                <dl class="detail_box gray">
+                                    <dt class="title">교재</dt>
+                                    <dd class="desc">
+                                        Episode Book 20권 / Speaking Practice 20권<br class="pc_br" />
+                                        Word Play 1권 / Self Study Planner 1권<br class="pc_br" />
+                                        Self Study Planner Stickers 11장<br class="pc_br" />
+                                        <p>* Speaking Practice의 답지 Answer Keys는 공지사항에서 확인하세요.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="detail_box gray">
+                                    <dt class="title">에그스쿨 앱</dt>
+                                    <dd class="desc">
+                                        Animation, Song Time, Mini Sitcom 영상 및<br class="pc_br" />
+                                        Comics, Song 오디오 파일 제공
+                                        <p>* 디지털콘텐츠 및 에그스쿨 앱은 결제일로부터 1년간 이용 가능</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <section class="product_feature_wrapper spacing_product">
+            <div class="container">
+                <ul class="feature_box_block" data-aos="fade-up">
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_english.png" alt="">
+                        <p class="desc">
+                            책과 영상을 통해 직접<br />
+                            <span class="font_point">Speaking 연습까지</span>
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_selfStudy.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">디지털 학습</span> 콘텐츠로<br />
+                            재미있게 셀프스터디
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_curriculum.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">미국</span> 교육열 <span class="font_point">상위 10개주</span><br />
+                            교육정책 기반 커리큘럼
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_planner.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">셀프스터디 플래너</span>로<br />
+                            자율 학습 동기부여
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_music.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">영상과 음원</span>으로 만나는<br />
+                            미국 유치원
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_timer.png" alt="">
+                        <p class="desc">
+                            하루 30분만으로<br />
+                            <span class="font_point">자기주도학습 습관</span> 들이기
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="spacing_product">
+            <!--S:1번-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">1</h3>
+                        <h3 class="title">
+                            듣기, 읽기, 말하기, 쓰기에<br class="m_br" /> 특화된 콘텐츠
+                        </h3>
+                        <p class="desc">
+                            영상과 디지털학습으로 학습한 내용을<br />
+                            교재와 E-book을 보며 예·복습해요.
+                        </p>
+                    </div>
+                    <ul class="content_box_block">
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner">
+                                    <img src="/images/product/element/img_step01_01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title font_point">디지털 콘텐츠</h4>
+                                    <p class="desc">
+                                        영상, 교재, 디지털 콘텐츠로 핵심표현을<br class="m_br" /> 반복하며<br class="pc_br" />
+                                        읽기, 듣기, 말하기, 쓰기<br class="m_br" /> 모든 영역의 능력을 향상시켜요.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner swiper contentSwiper">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <img src="/images/product/element/img_step01_02_01.png" alt="">
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <img src="/images/product/element/img_step01_02_02.png" alt="">
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title font_point">Episode Book</h4>
+                                    <p class="desc">
+                                        영상 속 내용을 만화책과 대본집으로<br class="m_br" /> 그대로 담은 교재
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner swiper contentSwiper">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <img src="/images/product/element/img_step01_03_01.png" alt="">
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <img src="/images/product/element/img_step01_03_02.png" alt="">
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title font_point">Speaking Practice</h4>
+                                    <p class="desc">
+                                        배운 표현을 응용하여<br class="m_br" /> 직접 적어보고 말해보는 교재
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner">
+                                    <img src="/images/product/element/img_step01_04.png" alt="">
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title font_point">E-Book</h4>
+                                    <p class="desc">
+                                        언제 어디서나 편하게<br class="m_br" /> 오디오를 들을 수 있는 e-book
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!--E:1번.-->
+            <!--S:2번.-->
+            <article class="number_content_wrapper">
+                <div class="num_title_block" data-aos="fade-up">
+                    <h3 class="number">2</h3>
+                    <h3 class="title">
+                        영상으로 만나는<br class="m_br" />
+                        미국 초등학교
+                    </h3>
+                    <p class="desc">
+                        미국 초등학생의 방학 생활을 담은 영상으로 <br />
+                        영미권 문화와 실생활 영어 표현을<br class="m_br" /> 쉽고 재미있게 접할 수 있어요.
+                    </p>
+                </div>
+                <div data-aos="fade-up">
+                    <div class="container">
+                        <ul class="video_tab_block">
+                            <li onclick="changeVideoTab(0)" class="tab_link active">Animation</li>
+                            <li onclick="changeVideoTab(1)" class="tab_link">Sitcom</li>
+                            <li onclick="changeVideoTab(2)" class="tab_link">Mini Sitcom</li>
+                            <li onclick="changeVideoTab(3)" class="tab_link">Intonation</li>
+                        </ul>
+                    </div>
+                    <div class="video_list_block">
+                        <div class="video_slide active">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/element/img_video_thumbnail_01.png" alt="">
+                                    <video loop muted playsinline controls class="video_source" controlsList = "nodownload"
+                                           src="https://player.vimeo.com/video/809602624?h=5c95004ac7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+                                    </video>
+                                    <!--                                    <iframe class="video_source"-->
+                                    <!--                                            src="https://player.vimeo.com/video/809602624?h=5c95004ac7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0"></iframe>-->
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Animation</p>
+                                    <p class="desc">Holly, Harry & Tony의 하루를 담은 20편의 애니메이션</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video_slide">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/element/img_video_thumbnail_02.png" alt="">
+                                    <video loop muted playsinline controls class="video_source" controlsList = "nodownload"
+                                           src="https://player.vimeo.com/video/681220495?h=6866eac728&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Sitcom</p>
+                                    <p class="desc">Holly, Harry, Tony의 방학을 담은 20편의 시트콤</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video_slide">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/element/img_video_thumbnail_03.png" alt="">
+                                    <video loop muted playsinline controls class="video_source" controlsList = "nodownload"
+                                           src="https://player.vimeo.com/video/690795848?h=f9f8016d66&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Mini Sitcom</p>
+                                    <p class="desc">주요 표현을 여러 상황에 활용해보는 미니 시트콤</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video_slide">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/element/img_video_thumbnail_04.png" alt="">
+                                    <video loop muted playsinline controls class="video_source" controlsList = "nodownload"
+                                           src="https://player.vimeo.com/video/690834785?h=ccde6c18c5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Intonation</p>
+                                    <p class="desc">원어민 선생님의 알려주는 억양 및 발음의 원리</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--E:2번.-->
+            <!--S:3번.-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">3</h3>
+                        <h3 class="title">
+                            매일 새로운 콘텐츠로<br class="m_br" /> 디지털 학습
+                        </h3>
+                        <p class="desc">
+                            더빙,노래 부르기, 단어 대결, 퀴즈 등<br />
+                            매일 다양하고 재미있는 활동을 통해<br class="m_br" /> 주요 표현을 반복해요.
+                        </p>
+                    </div>
+                    <div class="swiper digital_list_wrapper" id="videoSwiper" data-aos="fade-up">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_eggStudio.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">EGG Studio</p>
+                                    <p class="desc">
+                                        직접 내가 주인공이 되어<br class="pc_br" />
+                                        한 장면을 더빙해요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_wordContest.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Word Contest</p>
+                                    <p class="desc">
+                                        단어 대결 게임을 통해<br class="pc_br" /> 핵심 어휘를 정리해요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_quizTime.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Quiz Time</p>
+                                    <p class="desc">
+                                        배운 내용을 제대로 이해했는지<br class="pc_br" /> 퀴즈로 확인해요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_miniSitcom.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Mini Sitcom</p>
+                                    <p class="desc">
+                                        핵심 표현을 따라 말해요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_songTime.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Song Time</p>
+                                    <p class="desc">
+                                        핵심표현을 노래로 반복해요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_songStudio.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Song Studio</p>
+                                    <p class="desc">
+                                        직접 노래를 따라 불러요.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="swiper-slide digital_box">
+                                <div class="video_block">
+                                    <div class="video_player">
+                                        <img src="/images/product/element/img_timeLine.gif" alt="">
+                                    </div>
+                                </div>
+                                <div class="info_block">
+                                    <p class="title">Time Line</p>
+                                    <p class="desc">
+                                        전체 내용의 흐름을 정리해요.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_circle_prev swiper-button-prev"></div>
+                        <div class="btn_circle_next swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </article>
+            <!--E:3번.-->
+            <!--S:4번.-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">4</h3>
+                        <h3 class="title">
+                            매일 30분,<br class="m_br" /> 자기 주도 습관 형성
+                        </h3>
+                        <p class="desc">
+                            매일 30분, 부담 없이 학습하며<br class="m_br" /> 자연스럽게 학습 습관이 형성돼요.<br />
+                            셀프스터디 플래너가 있어서 동기부여가 돼요.
+                        </p>
+                    </div>
+                    <div class="thumb_block" data-aos="fade-up">
+                        <img src="/images/product/element/img_step04.png" alt="">
+                        <span class="bg_step04_01"><img src="/images/product/element/ico_step04_01.png" alt=""></span>
+                        <span class="bg_step04_02"><img src="/images/product/element/ico_step04_02.png" alt=""></span>
+                    </div>
+                </div>
+            </article>
+            <!--E:4번.-->
+        </section>
+        <!--S:tab-content-->
+        <section class="product_tab_wrapper">
+            <div class="step_bubble_block">
+                <p class="step_bubble">
+                    에그스쿨에서 미국<br class="m_br" />
+                    초등학교를 경험해보세요.
+                </p>
+            </div>
+            <ul class="step_tab_block">
+                <li class="tab_link active" onclick="changeTab(0)">1단계 <span class="name">애니메이션</span></li>
+                <li class="tab_link step2" onclick="changeTab(1)">2단계 <span class="name">시트콤</span></li>
+            </ul>
+            <div class="tab_content active">
+                <!--S:학습목표-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="border_title_block" data-aos="fade-up">
+                            <h4 class="title border">Holly, Harry, Tony의 하루</h4>
+                        </div>
+                        <div class="product_program_wrapper" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <img src="/images/product/element/animation/img_program_01.png" alt="">
+                            </div>
+                            <div class="info_block">
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">권장 연령</span></dt>
+                                    <dd class="desc">
+                                        만 5~9세
+                                        <p class="subscript">* 아이의 수준과 흥미에 따라서 전 연령 이용 가능합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">특징</span></dt>
+                                    <dd class="desc">
+                                        <ul>
+                                            <li class="check_info">애니메이션을 보고 내용을 이해할 수 있어요.</li>
+                                            <li class="check_info">일상 생활에 쓸 수 있는 표현을 말할 수 있어요.</li>
+                                            <li class="check_info">자기 주도 학습 습관을 키워요.</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:학습목표-->
+                <!--S:애니메이션...-->
+                <article class="spacing_product bg_secondary">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                Holly, Harry, Tony의 일상을<br class="m_br" /> <span class="font_point">애니메이션</span>으로 만나보세요.
+                            </h5>
+                        </div>
+                        <div class="swiper episodeSwiper episode_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/animation/img_episode_01.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">What Have You Done?</p>
+                                        <p class="desc">
+                                            엄마, 아빠를 도와주고 싶은 Tony, <br />
+                                            넘치는 장난끼 때문에 계속<br />
+                                            장난만 치네요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/animation/img_episode_02.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">Hey! I’m Right Here!</p>
+                                        <p class="desc">
+                                            예쁜 노란색 드레스를 입은 Holly,<br />
+                                            우리 주변에 노란색으로 된<br />
+                                            물체를 알아보아요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/animation/img_episode_03.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">Tony’s Coming!</p>
+                                        <p class="desc">
+                                            집에 놀러 오는 Tony를 맞이하기<br />
+                                            위해 마트에서 장도 보고<br />
+                                            집을 청소해요.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <!--E:애니메이션...-->
+                <!--S:아이들 중심 콘텐츠...-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                유학을 가지 않아도<br class="m_br" /> 유학 간 것처럼.<br />
+                                에그스쿨은 <span class="font_point">아이들 중심<br class="m_br" /> 콘텐츠</span>만을 제공해요.
+                            </h5>
+                        </div>
+                        <div class="swiper societySwiper society_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/animation/img_society_01.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                <strong class="font_bold">반복되는 표현과 직관적인 스토리</strong>로<br />
+                                                영어가 익숙하지 않은 아이들도<br />
+                                                쉽게 적응할 수 있어요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/animation/img_society_02.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                <strong class="font_bold">실제 미국 초등학생의 일상을<br />
+                                                    배경</strong>으로 한 영어 대사와 노래를<br />
+                                                일상에서 활용해요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/animation/img_society_03.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                <strong class="font_bold">애니메이션 속 캐릭터와 동화</strong>되어<br />
+                                                흥미를 느끼고 스스로 찾아서 해요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:아이들 중심 콘텐츠...-->
+            </div>
+            <div class="tab_content step2">
+                <!--S:학습목표-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="border_title_block" data-aos="fade-up">
+                            <h4 class="title border">Holly, Harry, Tony의 방학</h4>
+                        </div>
+                        <div class="product_program_wrapper" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <img src="/images/product/element/sitcom/img_program_01.png" alt="">
+                            </div>
+                            <div class="info_block">
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">권장 연령</span></dt>
+                                    <dd class="desc">
+                                        만 5~9세
+                                        <p class="subscript">* 아이의 수준과 흥미에 따라서 전 연령 이용 가능합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">특징</span></dt>
+                                    <dd class="desc">
+                                        <ul>
+                                            <li class="check_info">시트콤을 보고 내용을 이해할 수 있어요.</li>
+                                            <li class="check_info">일상 생활에 쓸 수 있는 표현을 말할 수 있어요.</li>
+                                            <li class="check_info">자기 주도 학습 습관을 키워요.</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:학습목표-->
+                <!--S:시트콤...-->
+                <article class="spacing_product bg_secondary">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                Holly, Harry, Tony의 일상을<br class="m_br" /><span class="font_point">시트콤</span>으로 만나보세요.
+                            </h5>
+                        </div>
+                        <div class="swiper episodeSwiper episode_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/sitcom/img_episode_01.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">The Baseball Equipment</p>
+                                        <p class="desc">
+                                            함께 야구 게임을 하는 Holly,<br />
+                                            Harry, Tony 심심했던 방학이<br />
+                                            재미있고 보람차요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/sitcom/img_episode_02.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">The Monster Puppy</p>
+                                        <p class="desc">
+                                            길 잃은 강아지를 데리고 온<br />
+                                            Holly, 하룻밤을 함께 보내고<br />
+                                            주인을 찾아줘요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/element/sitcom/img_episode_03.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">Pizza Delivery</p>
+                                        <p class="desc">
+                                            엄마가 출장을 간 동안, 매일 매일<br />
+                                            피자를 시켜먹은 아이들은<br />
+                                            이제 새로운 음식을 먹고 싶어요.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <!--E:시트콤...-->
+                <!--S:아이들 중심 콘텐츠...-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                유학을 가지 않아도<br class="m_br" /> 유학 간 것처럼.<br />
+                                에그스쿨은 <span class="font_point">아이들 중심<br class="m_br" /> 콘텐츠</span>만을 제공해요.
+                            </h5>
+                        </div>
+                        <div class="swiper societySwiper society_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/sitcom/img_society_01.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                <span class="font_bold">정형화된 언어가 아닌 구어체 표현</span>을<br />
+                                                접하며 원어민의 실제 발음과<br />
+                                                연음에 익숙해져요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/sitcom/img_society_02.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                    <span class="font_bold">실제 초등학생의 방학 생활을<br />
+                                                        그대로 담아</span> 영어를 영미권 문화와<br />
+                                                함께 자연스럽게 익혀요
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/element/sitcom/img_society_03.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <p class="desc">
+                                                    <span class="font_bold">주인공의 대사를 여러 상황에<br />
+                                                        활용</span>하며 영어 회화 실력이<br />
+                                                자연스럽게 향상돼요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:아이들 중심 콘텐츠...-->
+            </div>
+        </section>
+        <!--E:tab-content-->
+    </main>
+    <!--S:footer-->
+    <footer class="footer">
+        <div class="fnb_top_block border_btm">
+            <div class="container d_flex">
+                <ul>
+                    <li class="terms_link"><a href="https://docs.google.com/document/d/e/2PACX-1vR0-fRTqpnP3VTZkx_SjRdQ8jxmDFuOm8ydXe4GmCLsrsbKGxG9DJOGGYKMhPmLsCapIa0Bo5EYRhDe/pub" target="_blank">이용약관</a></li>
+                    <li class="terms_link"><a href="https://docs.google.com/document/u/2/d/e/2PACX-1vR5WssFOjfXb5slk5eRm9aB1Cxumk2hHMwGUvSjpG3lSAhPWXscJyLaNHECx26a0k-oK6pCKVzvKczy/pub" target="_blank">개인정보 취급방침</a></li>
+                </ul>
+                <div class="fms_wrapper">
+                    <button type="button" onclick="toggleFamilySite()" class="btn_fms">Family Site &nbsp;&nbsp; +</button>
+                    <ul class="fms_link_block">
+                        <li class="fms_link"><a href="https://www.englishegg.com/" target="_blank">잉글리시에그</a></li>
+                        <li class="fms_link"><a href="https://www.englishegg.com/eggproduct/expression_line/story.php" target="_blank">영어놀이 센터</a></li>
+                        <li class="fms_link"><a href="https://eggschool.net/" target="_blank">에그스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fnb_btm_block">
+            <div class="container d_flex m_column_reverse">
+                <div>
+                    <h2 class="f_logo m_d_none"><img src="/images/f_logo.png" alt="Egg School"></h2>
+                    <!--pc-->
+                    <ul class="fnb_info_block m_d_none d_block">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <span class="division">대표자  송진우</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                    <!-- mo -->
+                    <ul class="fnb_info_block m_d_block d_none">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표자  송진우</span>
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                </div>
+                <div class="d_flex">
+                    <div class="cs_block">
+                        <dl class="fnb_number">
+                            <dt class="title">고객센터</dt>
+                            <dd class="number">1566-4957</dd>
+                        </dl>
+                        <ul class="fnb_info_block">
+                            <li class="fnb_info">평일   10:00 ~ 17:00  (주말 / 공휴일 휴무)</li>
+                            <li class="fnb_info">점심   12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <ul class="sns_link_block">
+                        <li class="sns_link"><a href="https://cafe.naver.com/eggschoolk" target="_blank"><img src="/images/icon/ico_sns_cafe.png" alt="네이버 카페"></a></li>
+                        <li class="sns_link"><a href="https://www.instagram.com/eggschool_k/" target="_blank"><img src="/images/icon/ico_sns_instar.png" alt="인스타그램"></a></li>
+                        <li class="sns_link"><a href="https://www.youtube.com/channel/UC6te0BNTwvi8DDXeROUlSIg" target="_blank"><img src="/images/icon/ico_sns_youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--E:footer-->
+</div>
+<script>
+    AOS.init({
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        offset: 100, // offset (in px) from the original trigger point
+        delay: 5, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+    });
+</script>
+</body>
+</html>

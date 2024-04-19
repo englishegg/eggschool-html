@@ -1,0 +1,1720 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>유치원</title>
+    <!--S:fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <!--S: Swiper CDN-->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--S: gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--E:fonts-->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <script src="/js/modal.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--S:header-->
+    <header class="header">
+        <a href="/"><img src="/images/logo.png" alt="Egg School"></a>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community</span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="d_flex utill_menu_block">
+            <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            <button type="button" class="utill_menu" onclick="toggleMySchool()">My School
+                <ul class="mypage_link_block">
+                    <li class="mypage_link logout">로그아웃</li>
+                    <li class="mypage_link"><a href="/myschool/userinfo">회원정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                    <li class="mypage_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                    <li class="mypage_link"><a href="/myschool/paylist">결제내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/delivery">배송내역</a></li>
+                    <li class="mypage_link"><a href="/myschool/dataroom">자료실</a></li>
+                    <li class="mypage_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <!--S:mobile-->
+    <header class="m_header">
+        <div class="logo"><a href="/"><img src="/images/logo.png" alt="Egg School"></a></div>
+        <div class="m_menu_block">
+            <div class="utill_menu_block">
+                <button type="button" onclick="redirectToAppStore()" class="utill_menu">앱 다운로드</button>
+            </div>
+            <button class="btn_nav" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="m_nav_wrapper">
+        <div class="nav_top d_flex align_center">
+            <div class="login_block">
+                <img class="logo" src="/images/logo.png" alt="Egg School">
+                <p class="login_txt"><a href="/login" class="font_600">로그인</a>해주세요</p>
+            </div>
+            <button class="btn_nav open" onclick="handleMobileNav(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="gnb_wrapper">
+            <ul class="gnb_block">
+                <li class="gnb_link"><span class="gnb_text">Egg School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/eggshool/story">회사소개</a></li>
+                        <li class="lnb_link"><a href="/eggshool/system">시스템</a></li>
+                        <li class="lnb_link"><a href="/eggshool/curriculum">커리큘럼</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Product <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/product/kinder">유치원</a></li>
+                        <li class="lnb_link"><a href="/product/element">초등</a></li>
+                        <li class="lnb_link"><a href="/product/library">도서관</a></li>
+                        <li class="lnb_link"><a href="/product/freetrial">무료체험신청</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Study Room <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/studyroom/guide">학습가이드</a></li>
+                        <li class="lnb_link"><a href="/studyroom/guide/remotesupport">PC원격지원</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">Community <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/community/notice">공지사항</a></li>
+                        <li class="lnb_link"><a href="/community/event">이벤트</a></li>
+                        <li class="lnb_link"><a href="/community/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_link"><span class="gnb_text">My School <i class="ico_arrow"></i></span>
+                    <ul class="lnb_block">
+                        <li class="lnb_link"><a href="/myschool/userinfo">회원정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/studyinfo">학습정보</a></li>
+                        <li class="lnb_link"><a href="/myschool/appextend">앱 구독연장</a></li>
+                        <li class="lnb_link"><a href="/myschool/paylist">결제내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/delivery">배송내역</a></li>
+                        <li class="lnb_link"><a href="/myschool/dataroom">자료실</a></li>
+                        <li class="lnb_link"><a href="/myschool/qna">1:1 문의내역</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dimmed"></div>
+    <!--E:header-->
+    <main class="main_content kinder product">
+        <section class="sub_visual_wrapper">
+            <div class="sub_title_block">
+                <div class="inner">
+                    <h2 class="title" data-aos="fade-up">유치원</h2>
+                    <p class="desc" data-aos="fade-up">
+                        <strong class="font_600">아이들의 성장 발달 단계, 계절감, 시기별 활동 등을 <br />
+                            고려하여 구성된 커리큘럼</strong>으로 <br />
+                        매월 다양한 이야기를 집에서 편하게 즐겨보세요.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="product_link_wrapper">
+            <ul class="product_link_block">
+                <li class="product_link kinder active"><a href="/product/kinder">유치원</a></li>
+                <li class="product_link element"><a href="/product/element">초등</a></li>
+                <li class="product_link library"><a href="/product/library">도서관</a></li>
+            </ul>
+        </section>
+        <section class="product_detail_wrapper spacing_product">
+            <div class="container">
+                <h3 class="product_title" data-aos="fade-up">
+                    미국 교육과정 완벽 재현!<br />
+                    놀면서 언어와 문화를 배우는<br class="m_br" /> <strong class="font_point">미국 유치원</strong>입니다.
+                </h3>
+                <div class="product_thumb_box" data-aos="fade-up">
+                    <img src="/images/product/img_product_kinder.png" alt="">
+                    <div class="font_right">
+                        <button class="btn_detail" onclick="showModal('#productDetailModal')"><i class="ico_search"></i> 제품 구성 상세 안내</button>
+                    </div>
+                </div>
+            </div>
+            <aside class="modal header_gray" id="productDetailModal">
+                <div class="modal_content">
+                    <div class="modal_body">
+                        <div class="title_block">
+                            <div class="font_right">
+                                <button class="btn_close" onclick="closeModal('#productDetailModal')"><i class="ico_close"></i></button>
+                            </div>
+                            <p class="title">Pre-K(1단계), K(2단계)<br class="m_br" /> 구성품 안내</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="detail_list_wrapper">
+                                <dl class="detail_box">
+                                    <dt class="title">Pre-K 과정 전체 구성 </dt>
+                                    <dd class="desc">
+                                        스토리북 48권, 영상 144편, 활동자료 48종 , <br />
+                                        Video/Audio 카드 각 12매, Newsletter 12권, <br />
+                                        계절별 포스터 4장 + 스티커 12매, 녹음스티커
+                                    </dd>
+                                </dl>
+                                <dl class="detail_box">
+                                    <dt class="title">K 과정 전체 구성 </dt>
+                                    <dd class="desc">
+                                        스토리북 48권, 영상 144편, 활동자료 48종, <br />
+                                        Video/Audio 카드 각 12매, Newsletter 12권, <br />
+                                        계절별 포스터 4장 + 스티커 12매, 녹음스티커
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <section class="product_feature_wrapper spacing_product">
+            <div class="container">
+                <ul class="feature_box_block" data-aos="fade-up">
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_money.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">월 5만원대</span>로 <br />
+                            누리는 영어 유치원
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_delivery.png" alt="">
+                        <p class="desc">
+                            매월 집으로 <br />
+                            <span class="font_point">무료배송</span>
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_curriculum.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">미국</span> 교육열 <span class="font_point">10개주</span> <br />
+                            교육정책 기반 커리큘럼
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_bulb.png" alt="">
+                        <p class="desc">
+                            한가지 주제로 연계되는 <br />
+                            에피소드로 <span class="font_point">사고력 확장</span>
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_music.png" alt="">
+                        <p class="desc">
+                            <span class="font_point">영상과 음원</span>으로 만나는 <br />
+                            미국 유치원
+                        </p>
+                    </li>
+                    <li class="feature_box">
+                        <img class="ico_feature" src="/images/product/ico_feature_timer.png" alt="">
+                        <p class="desc">
+                            하루 30분만으로 <br />
+                            <span class="font_point">집에서</span> 충분한 <span class="font_point">영어노출</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="spacing_product">
+            <!--S:1.수준높은 콘텐츠-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">1</h3>
+                        <h3 class="title">
+                            수준 높은 콘텐츠로<br class="m_br" /> 영어를 즐겨요!
+                        </h3>
+                        <p class="desc">
+                            그림책, 오디오, 영상, 다양한 활동자료 등! <br />
+                            실제 미국 유치원 생활을 담은<br class="m_br" /> 생생한 콘텐츠를 만나보세요.
+                        </p>
+                    </div>
+                    <ul class="content_box_block">
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner">
+                                    <img src="/images/product/kinder/img_step01_01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title"><span class="font_point">매월 집으로 배송</span>되는 패키지</h4>
+                                    <p class="desc">
+                                        매월 새로운 에피소드를 담은<br />
+                                        스토리북, 영상, 활동자료 등이 집으로 배송되어<br />
+                                        우리집을 미국 유치원으로 만들 수 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content_box" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <div class="inner">
+                                    <img src="/images/product/kinder/img_step01_02.png" alt="">
+                                </div>
+                            </div>
+                            <div class="info_block">
+                                <div class="inner">
+                                    <h4 class="title">내 손 안의 영어 친구 <span class="font_point">에그스쿨 펜</span></h4>
+                                    <p class="desc">
+                                        스토리북, 오디오/비디오 카드를 콕콕 찍어 <br />
+                                        원하는 문장, 스토리, 노래를 마음껏 들을 수 있어요.
+                                    </p>
+                                    <p class="subscript">* Pre-K & K 패키지 구매 시, 특별 제공<br class="m_br" /> (이외의 상품은 별도 구매 필수)</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!--E:1.수준높은 콘텐츠-->
+            <!--S:2.영어로 만나는 미국 유치원-->
+            <article class="number_content_wrapper">
+                <div class="num_title_block" data-aos="fade-up">
+                    <h3 class="number">2</h3>
+                    <h3 class="title">
+                        영상으로 만나는<br class="m_br" />
+                        미국 유치원
+                    </h3>
+                    <p class="desc">
+                        100% 현지 원어민으로 이루어진 등장인물로 <br />
+                        미국 억양과 발음을 그대로 습득해요.
+                    </p>
+                </div>
+                <div data-aos="fade-up">
+                    <div class="container">
+                        <ul class="video_tab_block">
+                            <li onclick="changeVideoTab(0)" class="tab_link active">Episode</li>
+                            <li onclick="changeVideoTab(1)" class="tab_link">Song & Dance</li>
+                            <li onclick="changeVideoTab(2)" class="tab_link">Storytelling</li>
+                        </ul>
+                    </div>
+                    <div class="video_list_block">
+                        <div class="video_slide active">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/kinder/img_video_thumbnail_01.png" alt="">
+                                    <video playsinline
+                                           controls
+                                           controlsList = "nodownload"
+                                           class="video_source"
+                                           src="https://player.vimeo.com/progressive_redirect/playback/551333991/rendition/720p/file.mp4?loc=external&log_user=0&signature=bb89643650b5a4c4fef48a2caefdad41524f80e1a8ce4474f8a5302ac8066280">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Episode</p>
+                                    <p class="desc">시트콤으로 익히는 일상 속 유아 필수 영어 표현</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video_slide">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/kinder/img_video_thumbnail_02.png" alt="">
+                                    <video playsinline
+                                           controls
+                                           controlsList = "nodownload"
+                                           class="video_source"
+                                           src="https://player.vimeo.com/progressive_redirect/playback/551335159/rendition/720p/file.mp4?loc=external&log_user=0&signature=5e9b3e8e3525085d6f6df32217d0ce8bbbff3a912ae83475833939fb1bfc7907">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Song&Dance</p>
+                                    <p class="desc">신나는 노래와 율동으로 몸으로 배우는 영어</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video_slide">
+                            <div class="container">
+                                <div class="video_player">
+                                    <i class="ico_play"></i>
+                                    <img class="thumbnail" src="/images/product/kinder/img_video_thumbnail_03.png" alt="">
+                                    <video playsinline
+                                           controls
+                                           controlsList = "nodownload"
+                                           class="video_source"
+                                           src="https://player.vimeo.com/progressive_redirect/playback/551335666/rendition/720p/file.mp4?loc=external&log_user=0&signature=1adbc58f70365d56356f36670e77c6df3550e82f57e54174be8700338bdafc70">
+                                    </video>
+                                </div>
+                                <div class="video_info">
+                                    <p class="title">Storytelling</p>
+                                    <p class="desc">원어민 선생님이 읽어주는 생동감있는 스토리텔링</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--E:2.영어로 만나는 미국 유치원-->
+            <!--S:3.한 가지 주제로 연계되는 스토리북과 영상-->
+            <article class="number_content_wrapper">
+                <div class="container">
+                    <div class="num_title_block" data-aos="fade-up">
+                        <h3 class="number">3</h3>
+                        <h3 class="title">
+                            한 가지 주제로 연계되는<br class="m_br" />
+                            스토리북과 영상
+                        </h3>
+                        <p class="desc">
+                            영어 습득 효과를 높이기 위해 <br />
+                            같은 스토리도 다양한 난이도로 제공합니다.
+                        </p>
+                    </div>
+                    <div class="thumb_block" data-aos="fade-up">
+                        <img src="/images/product/kinder/img_step03.png" alt="">
+                    </div>
+                    <div class="swiper storybook_list_wrapper" id="storybookSwiper" data-aos="fade-up">
+                        <ul class="swiper-wrapper storybook_list_block">
+                            <li class="swiper-slide storybook_block">
+                                <span class="storybook_box border">적은 글밥, 알기 쉬운 책</span>
+                                <div class="ico_arrow_block">
+                                    <i class="ico_arrow_double"></i>
+                                    <i class="ico_arrow_double"></i>
+                                </div>
+                                <span class="storybook_box">스토리 이입 유도</span>
+                            </li>
+                            <li class="swiper-slide storybook_block">
+                                <span class="storybook_box border">확장된 표현을 담은 영상</span>
+                                <div class="ico_arrow_block">
+                                    <i class="ico_arrow_double"></i>
+                                    <i class="ico_arrow_double"></i>
+                                </div>
+                                <span class="storybook_box">지겹지 않게 반복 가능</span>
+                            </li>
+                            <li class="swiper-slide storybook_block">
+                                <span class="storybook_box border">같은 주제, 다양한 표현</span>
+                                <div class="ico_arrow_block">
+                                    <i class="ico_arrow_double"></i>
+                                    <i class="ico_arrow_double"></i>
+                                </div>
+                                <span class="storybook_box">영어식 표현력 극대화</span>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </article>
+            <!--E:3.한 가지 주제로 연계되는 스토리북과 영상-->
+        </section>
+        <!--S:tab-content-->
+        <section class="product_tab_wrapper">
+            <div class="step_bubble_block">
+                <p class="step_bubble">우리 아이에게 딱 맞는<br class="m_br" /> 유치원 단계를 선택해보세요.</p>
+            </div>
+            <ul class="step_tab_block">
+                <li class="tab_link active" onclick="changeTab(0)">1단계 <span class="name">Pre-K</span></li>
+                <li class="tab_link step2" onclick="changeTab(1)">2단계 <span class="name">K</span></li>
+            </ul>
+            <div class="tab_content active">
+                <!--S:미국 유치원의 일상-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="border_title_block" data-aos="fade-up">
+                            <h4 class="title border">미국 유치원의 일상</h4>
+                        </div>
+                        <div class="product_program_wrapper" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <img src="/images/product/kinder/prek/img_program_01.png" alt="Play It Again, Sammy">
+                            </div>
+                            <div class="info_block">
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">권장 연령</span></dt>
+                                    <dd class="desc">
+                                        만 2~5세
+                                        <p class="subscript">* 아이의 수준과 흥미에 따라서 전 연령 이용 가능합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">학습 목표</span></dt>
+                                    <dd class="desc">
+                                        16,981개의 단어, 유치원 생활 속 필수 표현 습득
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">특징</span></dt>
+                                    <dd class="desc">
+                                        <ul>
+                                            <li class="check_info">일상 속 다양한 상황을 다루는 기본 과정</li>
+                                            <li class="check_info">간단하고 짧은 문장을 상황별로 자연스럽게 습득</li>
+                                            <li class="check_info">유치원 입학 전 미리 배우는 다양한 유치원 생활</li>
+                                            <li class="check_info">필요한 규칙과 매너 습득</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 유치원의 일상-->
+                <!--S:미국 유치원... 매월 정기적으로 배송-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                <span class="font_point">미국 유치원</span>의 일상과<br class="m_br" /> 관련된 에피소드를 <br />
+                                매월 정기적으로 배송해요.
+                            </h5>
+                        </div>
+                        <div class="swiper monthlySwiper monthly_list_wrapper" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_01.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">Janauary</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">도형</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">도형 만들기</li>
+                                                    <li class="dash_info">친구들과 협동해 도형을 만들어요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Can you make~?</li>
+                                                    <li class="dash_info">We can make~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_02.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">February</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">동물</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">공룡 이름 맞추기</li>
+                                                    <li class="dash_info">퍼즐 속엔 어떤 공룡이 숨어 있나 맞춰봐요   </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">You need ~</li>
+                                                    <li class="dash_info">Body parts</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_03.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">March</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">동물</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">동물 따라하기</li>
+                                                    <li class="dash_info">동물을 따라하며 의성어와 의태어를 배워요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Let’s ~ like a ~</li>
+                                                    <li class="dash_info">Animal’s name</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_04.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">April</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">계절과 날씨</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">꽃과 나비를 보고 그려요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">I’ll catch ~</li>
+                                                    <li class="dash_info">Stay</li>
+                                                    <li class="dash_info">Got it!</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_05.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">May</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">수학</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">숫자 세기</li>
+                                                    <li class="dash_info">숫자를 세며 놀아요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">What’s in your pocket?</li>
+                                                    <li class="dash_info">How many? </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_06.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">June</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">만들기</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">종이 접기</li>
+                                                    <li class="dash_info">그림대로 종이 접기를 해요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Like this</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_07.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">July</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">사회 생활</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">규칙을 배우기</li>
+                                                    <li class="dash_info">손을 깨끗이 씻어요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">I don’t want to</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_08.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">August</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">동물</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">바다 동물 이름 알기</li>
+                                                    <li class="dash_info">바다에는 어떤 동물이 살까요?</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Can we have a ~?</li>
+                                                    <li class="dash_info">Sea animals</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_09.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">September</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">음식</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">음식 이름 알기</li>
+                                                    <li class="dash_info">재료를 모아 샌드위치를 만들어요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">How about~?</li>
+                                                    <li class="dash_info">Food</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_10.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">October</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">색깔</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">색의 이름 알기</li>
+                                                    <li class="dash_info">다양한 색깔을 말해봐요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Let’s ~ !</li>
+                                                    <li class="dash_info">I’ll ~ !</li>
+                                                    <li class="dash_info">Colors’ name</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_11.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">November</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">미국 어린이 놀이</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">친구들과 함께 놀기</li>
+                                                    <li class="dash_info">게임으로 술래를 정해요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">You can’t catch me</li>
+                                                    <li class="dash_info">You’re It</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/preknewyear_12.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">December</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">날씨와 계절</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">눈 놀이</li>
+                                                    <li class="dash_info">추운 겨울, 눈으로 여러가지를 만들며 놀아요!</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Let’s make ~!</li>
+                                                    <li class="dash_info">Snow things</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 유치원... 매월 정기적으로 배송-->
+                <!--S:미국 문화와 표현을 다양한 에피소드로...-->
+                <article class="spacing_product bg_secondary">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                미국 문화와 표현을<br class="m_br" /> <span class="font_point">다양한 에피소드</span>로 만나요.
+                            </h5>
+                        </div>
+                        <div class="swiper episodeSwiper episode_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/img_episode_01.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“Let’s have a potluck<br /> tomorrow!”</p>
+                                        <p class="desc">
+                                            각자 자신이 만든 음식을 가져와 <br />
+                                            나누어 먹는 영미권 문화, <br />
+                                            ‘포트럭파티’를 경험할 수 있어요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/img_episode_02.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“Eeny Meeny Miny <br class="pc_br" />Moe”</p>
+                                        <p class="desc">
+                                            영미권 어린이들이 놀이에서 편을<br />
+                                            가르거나 술래를 정하기 위해<br />
+                                            부르는 노래는 무엇일까요?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/prek/img_episode_03.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“It’s freezing outside.”</p>
+                                        <p class="desc">
+                                            “It’s cold.“ 라는 표현 대신<br />
+                                            영미권에서 실제로 자주 사용하는<br />
+                                            영어 표현을 습득할 수 있어요.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 문화와 표현을 다양한 에피소드로...-->
+                <!--S:올바른 인성과 사회성...-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                영어뿐만 아니라 아이들이 <br class="m_br" /><span class="font_point">올바른 인성과 <br class="pc_br" />
+                                    사회성</span>을 <br class="m_br" /> 가질 수 있도록 고려하였어요.
+                            </h5>
+                        </div>
+                        <div class="swiper societySwiper society_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/prek/img_society_01.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/prek/m_img_society_bubble_01.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/prek/img_society_bubble_01.png" alt="Bye bye, Bobby. See you tomorrow." >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                <span class="font_bold">유치원, 유아시기에 많이 사용</span>하는 <br />
+                                                표현들로 구성된<br class="pc_br" />
+                                                단어와 문장
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/prek/img_society_02.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/prek/m_img_society_bubble_02.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/prek/img_society_bubble_02.png" alt="I like rain. I like raindrops." >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                계절, 날씨, 음식, 동물, 숫자 등 <br />
+                                                호기심이 많은 <br class="pc_br" />
+                                                <span class="font_bold">아이의 눈높이에 딱 맞는 주제</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/prek/img_society_03.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/prek/m_img_society_bubble_03.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/prek/img_society_bubble_03.png" alt="I’m sorry…" >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                배려, 양보, 규칙, 문제 해결 등 <br />
+                                                인성과 사회성을 키울 수 있는 <br class="pc_br" />
+                                                <span class="font_bold">전인격적 교육</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:올바른 인성과 사회성...-->
+            </div>
+            <div class="tab_content step2">
+                <!--S:미국 유치원의 일상-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="border_title_block" data-aos="fade-up">
+                            <h4 class="title border">미국 유치원의  교과과정</h4>
+                        </div>
+                        <div class="product_program_wrapper" data-aos="fade-up">
+                            <div class="thumb_block">
+                                <img src="/images/product/kinder/k/img_program_01.png" alt="Waiting for Flowers">
+                            </div>
+                            <div class="info_block">
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">권장 연령</span></dt>
+                                    <dd class="desc">
+                                        만 3~6세
+                                        <p class="subscript">* 아이의 수준과 흥미에 따라서 전 연령 이용 가능합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">학습 목표</span></dt>
+                                    <dd class="desc">
+                                        20,868개의 단어, 미국 정규 교과목 표현 습득
+                                    </dd>
+                                </dl>
+                                <dl class="info_box">
+                                    <dt class="title"><span class="tag">특징</span></dt>
+                                    <dd class="desc">
+                                        <ul>
+                                            <li class="check_info">수학, 과학, 미술 등 다양한 분야를 다루는 심화 과정</li>
+                                            <li class="check_info">단체 활동에서 경험하는 놀이와 상황 및 대처법 학습</li>
+                                            <li class="check_info">더 넓은 세상과 문화를 직간접적으로 경험</li>
+                                            <li class="check_info">긴 대화문 속 유아 필수 영어 습득 </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 유치원의 일상-->
+                <!--S:미국 유치원... 매월 정기적으로 배송-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                <span class="font_point">미국 유치원의 교과과정</span>의<br class="m_br" /> 일상과 관련된 에피소드를 <br />
+                                매월 정기적으로 배송해요.
+                            </h5>
+                        </div>
+                        <div class="swiper monthlySwiper monthly_list_wrapper" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_01.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">Janauary</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">자연관찰</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">펭귄의 생태</li>
+                                                    <li class="dash_info">집의 형태</li>
+                                                    <li class="dash_info">펭귄의 특징에 대해 이야기 나누고, 다양한 집에 대해서도 알아봐요</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">I’m going to make a ~</li>
+                                                    <li class="dash_info">Can penguins ~?</li>
+                                                    <li class="dash_info">Their ~ are too ~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_02.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">February</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">소방 훈련</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">화재대비 훈련</li>
+                                                    <li class="dash_info">불이 났을 대 어떻게 해야 하는지 대처법을 알아보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">유치원 탐험</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">유치원 양호실을 경험해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Everyone, ~!</li>
+                                                    <li class="dash_info">I don’t feel good.</li>
+                                                    <li class="dash_info">My ~ hurts!</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_03.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">March</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">생물</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">개구리의 한살이를 관찰해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">또래 활동</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">규칙이 있는 게임을 이해하고 즐겨요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">They are so ~</li>
+                                                    <li class="dash_info">There are ~</li>
+                                                    <li class="dash_info">Follow me ~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_04.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">April</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">생물</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">식물의 생장을 관찰해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">직업</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">유치원에서 만날 수 있는 여러 사람에 대해 알아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Who wants ~?</li>
+                                                    <li class="dash_info">Who’s that guy?</li>
+                                                    <li class="dash_info">That’s ~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_05.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">May</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">유치원 행사</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">피냐타를 만들고 친구들과 즐겁게 놀아요.</li>
+                                                    <li class="dash_info">학급 앨범 사진을 찍어요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">First ~</li>
+                                                    <li class="dash_info">I like your ~</li>
+                                                    <li class="dash_info">You look great today.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_06.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">June</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">자연</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">날씨의 변화를 이해해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">야외 활동</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">동물원으로 야외 활동을 가요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">What happened to you?</li>
+                                                    <li class="dash_info">It's too ~</li>
+                                                    <li class="dash_info">I found one ~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_07.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">July</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">여름 활동</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">유치원에서 친구들과 신나게 물놀이해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">학교 생활 규칙</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">단체 생활에서 줄서는 습관을 들여요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Stop it!</li>
+                                                    <li class="dash_info">Stand in line. One at a time.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_08.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">August</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">수학</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">1부터 20까지 물고기 수를 세어보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">직업</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">여러 직업에 대해서 알아보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">I'll put on this ~</li>
+                                                    <li class="dash_info">I'm a (an) ~</li>
+                                                    <li class="dash_info">Are you a ~?</li>
+                                                    <li class="dash_info">They keep moving.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_09.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">September</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">지구과학</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">달에 대해 배우며 한 달 동안 달의 모양 변화를 배워보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">가을(자연) 놀이</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">친구들과 도토리를 주우며 자연 속에서 함께 놀아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Sometimes it ~</li>
+                                                    <li class="dash_info">Where does this go?</li>
+                                                    <li class="dash_info">This goes here.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_10.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">October</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">추론</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">정답 알아맞히기 놀이를 통해 추론을 해보세요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">예의범절</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">친구들 간에 지켜야 할 예절을 배워 보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Is it a ~?</li>
+                                                    <li class="dash_info">Don't ~!</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_11.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">November</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">과학실험</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">물에 녹는 재료를 실험해보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">도형</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">여러 가지 도형의 특징을 알아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Will the ~ disappear in the water?</li>
+                                                    <li class="dash_info">We need ~</li>
+                                                    <li class="dash_info">I've found some ~</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide monthly_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/knewyear_12.png" alt="">
+                                    </div>
+                                    <div class="info_block">
+                                        <div class="title">
+                                            <p class="month">December</p>
+                                            <p>생활주제</p>
+                                        </div>
+                                        <dl class="info_box">
+                                            <dt class="title">미술</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">손도장 그림을 하며 어떤 그림인지 맞혀보아요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">실내•야외놀이</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">차 경주, 눈싸움을 하며 친구들과 재미있는 시합을 해요.</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info_box">
+                                            <dt class="title">핵심 표현</dt>
+                                            <dd class="desc">
+                                                <ul>
+                                                    <li class="dash_info">Let’s make ~!</li>
+                                                    <li class="dash_info">Snow things</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 유치원... 매월 정기적으로 배송-->
+                <!--S:미국 문화와 표현을 다양한 에피소드로...-->
+                <article class="spacing_product bg_secondary">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                미국 문화와 표현을 <br class="m_br" /><span class="font_point">다양한 에피소드</span>로 만나요.
+                            </h5>
+                        </div>
+                        <div class="swiper episodeSwiper episode_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/img_episode_01.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“Simon Says touch <br />your hand.”</p>
+                                        <p class="desc">
+                                            영미권 친구들이 즐겨하는 <br />
+                                            Simon Says 게임을 배우고<br />
+                                            함께하며 영어를 즐길 수 있어요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/img_episode_02.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“We’ll make a piñata.”</p>
+                                        <p class="desc">
+                                            커다란 종이박스로 피냐타<br />
+                                            만들기를 하고 다른 문화권에 있는<br />
+                                            다양한 전통과 행사를 알아보아요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide episode_box">
+                                    <div class="thumb_block">
+                                        <img src="/images/product/kinder/k/img_episode_03.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="title">“You’re it!”</p>
+                                        <p class="desc">
+                                            영미권 친구들이 술래를 정할 때,<br />
+                                            지목할 때 어떤 영어 표현을<br />
+                                            사용하는지 알아보아요.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <!--E:미국 문화와 표현을 다양한 에피소드로...-->
+                <!--S:올바른 인성과 사회성...-->
+                <article class="spacing_product">
+                    <div class="container">
+                        <div class="sub_title_block" data-aos="fade-up">
+                            <h5 class="title">
+                                영어뿐만 아니라 아이들이 <br class="m_br" /><span class="font_point">올바른 인성과 <br class="pc_br" />
+                                    사회성</span>을<br class="m_br" /> 가질 수 있도록 고려하였어요.
+                            </h5>
+                        </div>
+                        <div class="swiper societySwiper society_list_wrapper swiper_container" data-aos="fade-up">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/k/img_society_01.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/k/m_img_society_bubble_01.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/k/img_society_bubble_01.png" alt="I found one sliding down a giraffe." >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                현장학습, 문화탐방, 상상놀이 등<br />
+                                                더 넓은 시각과  <span class="font_bold">다양한 관점 확립</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/k/img_society_02.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/k/m_img_society_bubble_02.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/k/img_society_bubble_02.png" alt="What does the moon look like?" >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                생물, 날씨, 직업, 도형 등<br />
+                                                다양한 분야에 대한 <span class="font_bold">심화 학습</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide shadow_box">
+                                    <div class="inner">
+                                        <div class="thumb_block">
+                                            <img src="/images/product/kinder/k/img_society_03.png" alt="">
+                                        </div>
+                                        <div class="info_block">
+                                            <span class="bubble">
+                                                <picture>
+                                                    <source srcset="/images/product/kinder/k/m_img_society_bubble_03.png" media="(max-width: 640px)">
+                                                    <img src="/images/product/kinder/k/img_society_bubble_03.png" alt="Stand in line. One at a time." >
+                                                </picture>
+                                            </span>
+                                            <p class="desc">
+                                                유치원 단체 활동 속 필요한<br />
+                                                예절과 규칙과 함께 배우는<br class="pc_br" />
+                                                <span class="font_bold">공동체 의식</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_circle_prev swiper-button-prev"></div>
+                            <div class="btn_circle_next swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </article>
+                <!--E:올바른 인성과 사회성...-->
+            </div>
+        </section>
+        <!--E:tab-content-->
+    </main>
+    <!--S:footer-->
+    <footer class="footer">
+        <div class="fnb_top_block border_btm">
+            <div class="container d_flex">
+                <ul>
+                    <li class="terms_link"><a href="https://docs.google.com/document/d/e/2PACX-1vR0-fRTqpnP3VTZkx_SjRdQ8jxmDFuOm8ydXe4GmCLsrsbKGxG9DJOGGYKMhPmLsCapIa0Bo5EYRhDe/pub" target="_blank">이용약관</a></li>
+                    <li class="terms_link"><a href="https://docs.google.com/document/u/2/d/e/2PACX-1vR5WssFOjfXb5slk5eRm9aB1Cxumk2hHMwGUvSjpG3lSAhPWXscJyLaNHECx26a0k-oK6pCKVzvKczy/pub" target="_blank">개인정보 취급방침</a></li>
+                </ul>
+                <div class="fms_wrapper">
+                    <button type="button" onclick="toggleFamilySite()" class="btn_fms">Family Site &nbsp;&nbsp; +</button>
+                    <ul class="fms_link_block">
+                        <li class="fms_link"><a href="https://www.englishegg.com/" target="_blank">잉글리시에그</a></li>
+                        <li class="fms_link"><a href="https://www.englishegg.com/eggproduct/expression_line/story.php" target="_blank">영어놀이 센터</a></li>
+                        <li class="fms_link"><a href="https://eggschool.net/" target="_blank">에그스쿨</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fnb_btm_block">
+            <div class="container d_flex m_column_reverse">
+                <div>
+                    <h2 class="f_logo m_d_none"><img src="/images/f_logo.png" alt="Egg School"></h2>
+                    <!--pc-->
+                    <ul class="fnb_info_block m_d_none d_block">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <span class="division">대표자  송진우</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                    <!-- mo -->
+                    <ul class="fnb_info_block m_d_block d_none">
+                        <li class="fnb_info">
+                            <span class="division">(유)에그스쿨</span>
+                            <address class="division">서울특별시 서초구 동작대로 212(방배동)</address>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">대표자  송진우</span>
+                            <span class="division">대표번호  1566-4957</span>
+                            <span class="division">사업자등록번호  262-88-01866</span>
+                        </li>
+                        <li class="fnb_info">
+                            <span class="division">개인정보 보호 책임자  정형모 (hyoungmo2@eggschool.net)</span>
+                        </li>
+                        <li class="fnb_info copyright">Copyright ⓒ EGG School LLC. ALL RIGHTS RESERVED</li>
+                    </ul>
+                </div>
+                <div class="d_flex">
+                    <div class="cs_block">
+                        <dl class="fnb_number">
+                            <dt class="title">고객센터</dt>
+                            <dd class="number">1566-4957</dd>
+                        </dl>
+                        <ul class="fnb_info_block">
+                            <li class="fnb_info">평일   10:00 ~ 17:00  (주말 / 공휴일 휴무)</li>
+                            <li class="fnb_info">점심   12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <ul class="sns_link_block">
+                        <li class="sns_link"><a href="https://cafe.naver.com/eggschoolk" target="_blank"><img src="/images/icon/ico_sns_cafe.png" alt="네이버 카페"></a></li>
+                        <li class="sns_link"><a href="https://www.instagram.com/eggschool_k/" target="_blank"><img src="/images/icon/ico_sns_instar.png" alt="인스타그램"></a></li>
+                        <li class="sns_link"><a href="https://www.youtube.com/channel/UC6te0BNTwvi8DDXeROUlSIg" target="_blank"><img src="/images/icon/ico_sns_youtube.png" alt="유튜브"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--E:footer-->
+</div>
+<script>
+    AOS.init({
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        offset: 100, // offset (in px) from the original trigger point
+        delay: 5, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+    });
+</script>
+</body>
+</html>
