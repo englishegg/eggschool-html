@@ -1067,8 +1067,8 @@
     top: 0.5em;
 }
 
-.sns_item .ico.instar { background-image: url("../../images/icon/ico_sns_instar_color.png"); }
-.sns_item .ico.youtube { background-image: url("../../images/icon/ico_sns_youtube_color.png"); }
+.sns_item .ico.instar { background-image: url("./../images/icon/ico_sns_instar_color.png"); }
+.sns_item .ico.youtube { background-image: url("./../images/icon/ico_sns_youtube_color.png"); }
 
 .sns_item .sns_id {
     margin-bottom: 0.8em;
