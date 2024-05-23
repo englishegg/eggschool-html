@@ -444,7 +444,7 @@
     display: inline-block;
     width: 1em;
     height: 1em;
-    background: url('../../images/icon/ico_link_arrow.png') center center no-repeat;
+    background: url('./../images/icon/ico_link_arrow.png') center center no-repeat;
     background-size: 100%;
     margin-left: 0.3em;
     position: relative;
@@ -617,7 +617,7 @@
 }
 
 .mo_ver.sticky_section {
-    background: var(--bg-sticky) url('../../images/icon/bg_flower.png') -5% 130% no-repeat;
+    background: var(--bg-sticky) url('./../images/icon/bg_flower.png') -5% 130% no-repeat;
     background-blend-mode : luminosity;
     background-size: 50%;
 }
@@ -727,7 +727,7 @@
     display: inline-block;
     width: 2.25rem;
     height: 1.9rem;
-    background: url('../../images/icon/ico_quotes.png') no-repeat;
+    background: url('./../images/icon/ico_quotes.png') no-repeat;
     background-size: contain;
 }
 
